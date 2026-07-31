@@ -1,26 +1,608 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-31T16:41:41.003Z",
+  "updatedAt": "2026-07-31T16:46:39.065Z",
   "startedAt": "2026-07-31T16:41:41.000Z",
   "publishIntervalSeconds": 300,
   "mode": "paper",
   "paused": false,
   "healthy": true,
-  "status": "warming",
+  "status": "running",
   "asset": {
-    "symbol": "SOL",
-    "name": "Solana"
+    "symbol": "JIMOTHY",
+    "name": "Jimothy The Raccoon"
   },
   "initialPortfolioUsd": 100,
   "portfolioUsd": 100,
   "cashUsd": 100,
   "positionUsd": 0,
-  "tokenPriceUsd": null,
+  "tokenPriceUsd": 0.007703601595014073,
   "pnlUsd": 0,
   "pnlPercent": 0,
   "tradeCount": 0,
   "completedCycles": 0,
-  "decision": null,
-  "history": [],
-  "activity": []
+  "decision": {
+    "action": "HOLD",
+    "confidence": 1,
+    "sizeUsd": 0,
+    "rationale": "Price remains between grid levels. Waiting for the next crossing.",
+    "executed": false
+  },
+  "history": [
+    {
+      "timestamp": "2026-07-31T16:42:49.940Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:42:50.990Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:42:53.050Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:42:55.996Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:42:58.991Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:01.994Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:05.060Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:07.994Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:11.200Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:13.995Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:16.999Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:19.998Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:22.997Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:26.001Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:29.062Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:32.005Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:35.072Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:38.018Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:41.077Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:49.260Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:50.309Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:52.374Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:55.312Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:43:58.375Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:01.308Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:04.318Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:07.321Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:10.377Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:13.312Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:16.384Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:19.319Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:22.384Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:25.318Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:28.329Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:31.321Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:34.327Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:37.331Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:40.390Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:43.327Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:51.576Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:52.695Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:54.628Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:44:57.628Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:00.701Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:03.636Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:06.707Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:09.646Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:12.698Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:15.636Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:18.699Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:21.635Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:24.635Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:27.645Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:30.705Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:33.646Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:36.641Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:39.648Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:42.718Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:45.644Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:53.959Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:54.947Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:45:57.070Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:00.076Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:03.015Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:06.060Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:09.056Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:12.124Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:15.056Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:18.122Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:21.058Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:24.128Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:27.120Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:30.067Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:33.070Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:36.065Z",
+      "portfolioUsd": 100
+    },
+    {
+      "timestamp": "2026-07-31T16:46:39.065Z",
+      "portfolioUsd": 100
+    }
+  ],
+  "activity": [
+    {
+      "timestamp": "2026-07-31T16:46:39.065Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007703601595014073,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:36.065Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007703601595014073,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:33.070Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.0077162112038821765,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:30.067Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.0077162112038821765,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:27.120Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007738133911016335,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:24.128Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007738133911016335,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:21.058Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007703456433100874,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:18.122Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007703456433100874,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:15.056Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007703456399209873,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:12.124Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007703456399209873,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:09.056Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.0077384992413597,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:06.060Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.0077384992413597,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:03.015Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007699230006015153,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:46:00.076Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007699230006015153,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:57.070Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007730822096303899,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:54.947Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007730822096303899,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:53.959Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007730822096303899,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:45.644Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007739476386216718,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:42.718Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007739476386216718,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:39.648Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007738134847208654,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:36.641Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007738134847208654,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:33.646Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007738134847208654,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:30.705Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007738134847208654,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:27.645Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007748167379463908,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:24.635Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007748167379463908,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:21.635Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007748167379463908,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:18.699Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007748167379463908,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:15.636Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007729299185908799,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:12.698Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007729299185908799,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-07-31T16:45:09.646Z",
+      "symbol": "JIMOTHY",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 0.007763153045817595,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    }
+  ]
 }
