@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A public build log for an experimental Solana AI paper-trading bot.">
+    <meta name="theme-color" content="#080b08">
+    <meta property="og:title" content="Orbit — Learning in public">
+    <meta property="og:description" content="Follow an experimental Solana AI paper-trading bot, one cycle at a time.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Orbit — Learning in public">
+    <meta name="twitter:description" content="An experimental Solana AI paper-trading build log.">
+    <title>Orbit — Public Paper-Trading Experiment</title>
+    <style>:root {
+  --bg: #080b08;
+  --panel: #0d110d;
+  --panel-2: #101510;
+  --line: #263024;
+  --line-soft: #192018;
+  --text: #f1f5e9;
+  --muted: #8c9687;
+  --green: #b9ff35;
+  --green-soft: rgba(185, 255, 53, 0.13);
+  --purple: #9c7cff;
+  --red: #ff716d;
+  --amber: #ffcf66;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    linear-gradient(rgba(185, 255, 53, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(185, 255, 53, 0.018) 1px, transparent 1px),
+    radial-gradient(circle at 77% 8%, rgba(185, 255, 53, 0.08), transparent 24rem),
+    var(--bg);
+  background-size: 48px 48px, 48px 48px, auto, auto;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+.shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+.site-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.brand, .header-status, .eyebrow, .metric p, .metric span, .state-label,
+.guard-result span, .date-chip, .principles span, footer {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.brand { display: flex; align-items: center; gap: 11px; font-size: 14px; font-weight: 800; }
+.brand-muted { color: var(--muted); }
+.orbit-mark {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 24px;
+  border: 1px solid var(--green);
+  border-radius: 50%;
+  transform: rotate(-18deg);
+}
+.orbit-mark::after { content: ""; width: 28px; height: 28px; border: 1px solid var(--green); border-radius: 50%; transform: rotate(54deg); }
+.orbit-mark span { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 12px var(--green); }
+.header-status { display: flex; align-items: center; gap: 10px; color: var(--green); font-size: 11px; font-weight: 800; }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 13px var(--green); }
+.content { padding: 78px 0 42px; }
+.hero { display: grid; grid-template-columns: 1.5fr .7fr; gap: 80px; align-items: end; margin-bottom: 66px; }
+.eyebrow { margin: 0 0 16px; color: var(--green); font-size: 10px; font-weight: 800; }
+h1 { margin: 0; font-size: clamp(48px, 7vw, 88px); line-height: .94; letter-spacing: -.055em; font-weight: 630; }
+.hero-copy { max-width: 680px; margin: 30px 0 0; color: #aab3a5; font-size: 17px; line-height: 1.7; }
+.experiment-state { border-left: 1px solid var(--line); padding: 14px 0 14px 26px; }
+.state-label { display: block; color: var(--muted); font-size: 9px; }
+.experiment-state strong { display: block; margin: 15px 0 10px; color: var(--amber); font-size: 20px; letter-spacing: .02em; }
+.experiment-state strong.running { color: var(--green); }
+.experiment-state p { margin: 0; color: var(--muted); line-height: 1.55; font-size: 14px; }
+.metric-grid { display: grid; grid-template-columns: 1.35fr repeat(3, 1fr); border: 1px solid var(--line); margin-bottom: 18px; background: rgba(12, 16, 12, .74); }
+.metric { min-height: 154px; padding: 27px 28px; border-right: 1px solid var(--line); display: flex; flex-direction: column; justify-content: space-between; }
+.metric:last-child { border-right: 0; }
+.metric p { margin: 0; color: var(--muted); font-size: 9px; }
+.metric strong { font-size: 30px; line-height: 1; letter-spacing: -.04em; }
+.primary-metric strong { font-size: 47px; }
+.metric span { color: var(--muted); font-size: 9px; }
+.negative { color: var(--red) !important; }
+.main-grid { display: grid; grid-template-columns: 1.65fr .65fr; gap: 18px; margin-bottom: 18px; }
+.lower-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+.panel { border: 1px solid var(--line); background: linear-gradient(145deg, rgba(16,21,16,.94), rgba(10,13,10,.94)); }
+.chart-panel { padding: 30px 32px 22px; min-height: 430px; }
+.panel-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+.panel-heading h2, .guard-panel h2, .about-panel h2 { margin: 0; font-size: 24px; letter-spacing: -.02em; }
+.chart-value { text-align: right; }
+.chart-value strong { display: block; font-size: 25px; }
+.chart-value span { font-family: monospace; font-size: 10px; }
+.chart { position: relative; height: 270px; margin-top: 28px; overflow: hidden; border-bottom: 1px solid var(--line); }
+.chart-grid { position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, transparent 0, transparent 66px, var(--line-soft) 67px); }
+.area-fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(185,255,53,.5), rgba(185,255,53,.02));
+  clip-path: polygon(0 42%, 7% 29%, 13% 36%, 20% 36%, 27% 34%, 33% 36%, 40% 20%, 47% 30%, 53% 30%, 60% 30%, 67% 53%, 73% 65%, 80% 53%, 87% 53%, 93% 72%, 100% 95%, 100% 100%, 0 100%);
+}
+.chart.fresh .area-fill { clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%); }
+.chart.fresh .area-fill::before { clip-path: polygon(0 49.5%, 100% 49.5%, 100% 50.4%, 0 50.4%); }
+.chart.fresh .end-point { bottom: calc(50% - 4px); }
+.area-fill::before { content: ""; position: absolute; inset: 0; background: var(--green); clip-path: polygon(0 41.4%, 7% 28.4%, 13% 35.4%, 20% 35.4%, 27% 33.4%, 33% 35.4%, 40% 19.4%, 47% 29.4%, 53% 29.4%, 60% 29.4%, 67% 52.4%, 73% 64.4%, 80% 52.4%, 87% 52.4%, 93% 71.4%, 100% 94.4%, 100% 95.3%, 93% 72.3%, 87% 53.3%, 80% 53.3%, 73% 65.3%, 67% 53.3%, 60% 30.3%, 53% 30.3%, 47% 30.3%, 40% 20.3%, 33% 36.3%, 27% 34.3%, 20% 36.3%, 13% 36.3%, 7% 29.3%, 0 42.3%); }
+.end-point { position: absolute; right: 0; bottom: 2%; width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 15px var(--green); }
+.chart-high, .chart-low { position: absolute; right: 10px; color: var(--muted); font-family: monospace; font-size: 9px; }
+.chart-high { top: 7px; }
+.chart-low { bottom: 8px; }
+.chart-axis { display: flex; justify-content: space-between; margin-top: 12px; color: var(--muted); font-family: monospace; font-size: 9px; }
+.guard-panel { padding: 30px; display: flex; flex-direction: column; }
+.guard-icon { width: 64px; height: 64px; margin: 34px 0 24px; border: 1px solid var(--amber); border-radius: 50%; display: grid; place-items: center; color: var(--amber); font-family: monospace; font-weight: 800; box-shadow: inset 0 0 25px rgba(255,207,102,.07); }
+.guard-icon.active { border-color: var(--green); color: var(--green); box-shadow: inset 0 0 25px rgba(185,255,53,.08), 0 0 18px rgba(185,255,53,.05); }
+.guard-panel > p:not(.eyebrow) { color: var(--muted); line-height: 1.65; font-size: 14px; }
+.guard-result { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: end; }
+.guard-result span { color: var(--muted); font-size: 8px; }
+.guard-result strong { font-size: 20px; }
+.activity-panel, .about-panel { min-height: 360px; padding: 30px 32px; }
+.panel-heading.compact { padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.date-chip { border: 1px solid var(--line); color: var(--muted); padding: 8px 10px; font-size: 8px; }
+.activity-list { list-style: none; margin: 0; padding: 0; }
+.activity-list li { display: grid; grid-template-columns: 68px 10px 1fr; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--line-soft); }
+.activity-list li:last-child { border-bottom: 0; }
+.activity-list time { color: var(--muted); font-family: monospace; font-size: 10px; padding-top: 3px; }
+.activity-marker { width: 7px; height: 7px; margin-top: 4px; border-radius: 50%; background: var(--muted); }
+.activity-marker.alert { background: var(--amber); box-shadow: 0 0 9px rgba(255,207,102,.5); }
+.activity-marker.buy { background: var(--purple); }
+.activity-marker.sell { background: var(--green); }
+.activity-list strong { font-size: 13px; }
+.activity-list p { margin: 7px 0 0; color: var(--muted); line-height: 1.5; font-size: 12px; }
+.about-panel { display: flex; flex-direction: column; }
+.about-panel > p:not(.eyebrow) { max-width: 520px; color: var(--muted); line-height: 1.75; font-size: 14px; }
+.principles { margin-top: auto; display: grid; gap: 12px; padding-top: 25px; border-top: 1px solid var(--line); color: var(--green); font-size: 9px; }
+footer { display: flex; justify-content: space-between; gap: 50px; margin-top: 32px; padding: 28px 0 0; border-top: 1px solid var(--line); color: #677063; font-size: 8px; line-height: 1.8; }
+footer p { margin: 0; max-width: 680px; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; gap: 38px; }
+  .experiment-state { max-width: 520px; }
+  .metric-grid { grid-template-columns: 1fr 1fr; }
+  .metric:nth-child(2) { border-right: 0; }
+  .metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .main-grid, .lower-grid { grid-template-columns: 1fr; }
+  .guard-panel { min-height: 390px; }
+}
+
+@media (max-width: 580px) {
+  .shell { width: min(100% - 24px, 1180px); }
+  .site-header { height: 66px; }
+  .brand-muted { display: none; }
+  .content { padding-top: 52px; }
+  .hero { margin-bottom: 45px; }
+  h1 { font-size: 48px; }
+  .hero-copy { font-size: 15px; }
+  .metric-grid { grid-template-columns: 1fr; }
+  .metric { min-height: 130px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .metric:last-child { border-bottom: 0; }
+  .chart-panel, .guard-panel, .activity-panel, .about-panel { padding: 24px 20px; }
+  .chart { height: 220px; }
+  .chart-value { display: none; }
+  .activity-list li { grid-template-columns: 56px 8px 1fr; gap: 10px; }
+  footer { flex-direction: column; gap: 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+  </head>
+  <body>
+    <main>
+      <header class="site-header shell">
+        <a class="brand" href="#top" aria-label="Orbit experiment home">
+          <span class="orbit-mark" aria-hidden="true"><span></span></span>
+          <span>ORBIT</span><span class="brand-muted">/ PUBLIC EXPERIMENT</span>
+        </a>
+        <div class="header-status"><span class="status-dot"></span>PAPER MODE</div>
+      </header>
+
+      <div class="shell content" id="top">
+        <section class="hero">
+          <div>
+            <p class="eyebrow">SOLANA AI TRADING BOT · BUILD LOG</p>
+            <h1>Learning in public,<br>one cycle at a time.</h1>
+            <p class="hero-copy">A read-only record of an experimental grid-trading bot as it tests market selection, bounded entries, exits, and safety rules.</p>
+          </div>
+          <div class="experiment-state">
+            <span class="state-label">CURRENT STATE</span>
+            <strong class="running">TEST 02 RUNNING</strong>
+            <p>The fresh $100 paper session is scanning KINS and waiting for a qualified grid crossing.</p>
+          </div>
+        </section>
+
+        <section class="metric-grid" aria-label="Paper trading results">
+          <article class="metric primary-metric"><p>PORTFOLIO VALUE</p><strong>$100.00</strong><span>Fresh paper baseline</span></article>
+          <article class="metric"><p>NET RESULT</p><strong>$0.00</strong><span>0.00%</span></article>
+          <article class="metric"><p>TRADES</p><strong>0</strong><span>Collecting evidence</span></article>
+          <article class="metric"><p>SELECTED MARKET</p><strong>KINS</strong><span>Grid warming</span></article>
+        </section>
+
+        <section class="main-grid">
+          <article class="panel chart-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">CURRENT PAPER SESSION</p><h2>First market samples</h2></div>
+              <div class="chart-value"><strong>$100.00</strong><span>0.00% so far</span></div>
+            </div>
+            <div class="chart fresh" role="img" aria-label="Portfolio value holding at 100 dollars">
+              <div class="chart-grid"></div><div class="area-fill"></div><div class="end-point"></div>
+              <span class="chart-high">$100.00</span><span class="chart-low">$100.00</span>
+            </div>
+            <div class="chart-axis"><span>8:50 AM</span><span>8:53 AM</span></div>
+          </article>
+
+          <aside class="panel guard-panel">
+            <p class="eyebrow">CURRENT DECISION</p><div class="guard-icon active" aria-hidden="true">AI</div>
+            <h2>Holding for evidence</h2>
+            <p>Price remains between grid levels. The bot is waiting instead of forcing an entry before its market conditions qualify.</p>
+            <div class="guard-result"><span>OPEN EXPOSURE</span><strong>$0.00</strong></div>
+          </aside>
+        </section>
+
+        <section class="lower-grid">
+          <article class="panel activity-panel">
+            <div class="panel-heading compact"><div><p class="eyebrow">RECENT ACTIVITY</p><h2>What the bot did</h2></div><span class="date-chip">JUL 31</span></div>
+            <ol class="activity-list">
+              <li><time>8:53 AM</time><span class="activity-marker sell"></span><div><strong>KINS selected</strong><p>The automatic selector moved to KINS and began collecting grid samples.</p></div></li>
+              <li><time>8:51 AM</time><span class="activity-marker buy"></span><div><strong>Fresh session</strong><p>Started Test 02 with a clean $100 simulated balance and no open exposure.</p></div></li>
+              <li><time>JUL 29</time><span class="activity-marker alert"></span><div><strong>Prior safety exit</strong><p>Test 01 ended at $99.52 after its 9% position circuit breaker closed the final paper position.</p></div></li>
+            </ol>
+          </article>
+
+          <article class="panel about-panel">
+            <p class="eyebrow">THE EXPERIMENT</p><h2>Built to test, not promise.</h2>
+            <p>Orbit compares short- and longer-term momentum, liquidity, trading activity, execution costs, and risk limits before making a simulated decision. Each loss is evidence for the next revision.</p>
+            <div class="principles"><span>01 · PAPER FIRST</span><span>02 · BOUNDED RISK</span><span>03 · VISIBLE RESULTS</span></div>
+          </article>
+        </section>
+
+        <footer>
+          <p>Last snapshot: July 31, 2026 at 8:53 AM PT</p>
+          <p>Simulated paper-trading results only. No real funds were traded. This experiment is not financial advice and does not guarantee future performance.</p>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
