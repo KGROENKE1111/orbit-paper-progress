@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-31T16:41:41.003Z",
+  "startedAt": "2026-07-31T16:41:41.000Z",
+  "publishIntervalSeconds": 300,
+  "mode": "paper",
+  "paused": false,
+  "healthy": true,
+  "status": "warming",
+  "asset": {
+    "symbol": "SOL",
+    "name": "Solana"
+  },
+  "initialPortfolioUsd": 100,
+  "portfolioUsd": 100,
+  "cashUsd": 100,
+  "positionUsd": 0,
+  "tokenPriceUsd": null,
+  "pnlUsd": 0,
+  "pnlPercent": 0,
+  "tradeCount": 0,
+  "completedCycles": 0,
+  "decision": null,
+  "history": [],
+  "activity": []
+}
