@@ -3,6 +3,463 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A read-only live mirror of an experimental Solana AI paper-trading bot.">
+    <meta name="theme-color" content="#080b08">
+    <meta property="og:title" content="Orbit — Live paper-trading experiment">
+    <meta property="og:description" content="Follow a sanitized, read-only Solana AI paper-trading experiment.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Orbit — Live paper-trading experiment">
+    <meta name="twitter:description" content="A sanitized public mirror of an experimental paper-trading bot.">
+    <meta name="twitter:image" content="og.png">
+    <title>Orbit — Live Paper-Trading Experiment</title>
+    <link rel="icon" href="favicon.svg">
+    <style>
+:root {
+  --bg: #080b08;
+  --panel: #0d110d;
+  --panel-2: #101510;
+  --line: #263024;
+  --line-soft: #192018;
+  --text: #f1f5e9;
+  --muted: #8c9687;
+  --green: #b9ff35;
+  --green-soft: rgba(185, 255, 53, 0.13);
+  --purple: #9c7cff;
+  --red: #ff716d;
+  --amber: #ffcf66;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    linear-gradient(rgba(185, 255, 53, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(185, 255, 53, 0.018) 1px, transparent 1px),
+    radial-gradient(circle at 77% 8%, rgba(185, 255, 53, 0.08), transparent 24rem),
+    var(--bg);
+  background-size: 48px 48px, 48px 48px, auto, auto;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+.shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+.site-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.brand, .header-status, .eyebrow, .metric p, .metric span, .state-label,
+.guard-result span, .date-chip, .principles span, footer {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.brand { display: flex; align-items: center; gap: 11px; font-size: 14px; font-weight: 800; }
+.brand-muted { color: var(--muted); }
+.orbit-mark {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 24px;
+  border: 1px solid var(--green);
+  border-radius: 50%;
+  transform: rotate(-18deg);
+}
+.orbit-mark::after { content: ""; width: 28px; height: 28px; border: 1px solid var(--green); border-radius: 50%; transform: rotate(54deg); }
+.orbit-mark span { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 12px var(--green); }
+.header-status { display: flex; align-items: center; gap: 10px; color: var(--green); font-size: 11px; font-weight: 800; }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 13px var(--green); }
+.header-status.stale { color: var(--amber); }
+.header-status.stale .status-dot { background: var(--amber); box-shadow: 0 0 13px var(--amber); }
+.content { padding: 78px 0 42px; }
+.hero { display: grid; grid-template-columns: 1.5fr .7fr; gap: 80px; align-items: end; margin-bottom: 66px; }
+.eyebrow { margin: 0 0 16px; color: var(--green); font-size: 10px; font-weight: 800; }
+h1 { margin: 0; font-size: clamp(48px, 7vw, 88px); line-height: .94; letter-spacing: -.055em; font-weight: 630; }
+.hero-copy { max-width: 680px; margin: 30px 0 0; color: #aab3a5; font-size: 17px; line-height: 1.7; }
+.experiment-state { border-left: 1px solid var(--line); padding: 14px 0 14px 26px; }
+.state-label { display: block; color: var(--muted); font-size: 9px; }
+.experiment-state strong { display: block; margin: 15px 0 10px; color: var(--amber); font-size: 20px; letter-spacing: .02em; }
+.experiment-state strong.running { color: var(--green); }
+.experiment-state p { margin: 0; color: var(--muted); line-height: 1.55; font-size: 14px; }
+.metric-grid { display: grid; grid-template-columns: 1.35fr repeat(3, 1fr); border: 1px solid var(--line); margin-bottom: 18px; background: rgba(12, 16, 12, .74); }
+.metric { min-height: 154px; padding: 27px 28px; border-right: 1px solid var(--line); display: flex; flex-direction: column; justify-content: space-between; }
+.metric:last-child { border-right: 0; }
+.metric p { margin: 0; color: var(--muted); font-size: 9px; }
+.metric strong { font-size: 30px; line-height: 1; letter-spacing: -.04em; }
+.primary-metric strong { font-size: 47px; }
+.metric span { color: var(--muted); font-size: 9px; }
+.negative { color: var(--red) !important; }
+.positive { color: var(--green) !important; }
+.main-grid { display: grid; grid-template-columns: 1.65fr .65fr; gap: 18px; margin-bottom: 18px; }
+.lower-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+.panel { border: 1px solid var(--line); background: linear-gradient(145deg, rgba(16,21,16,.94), rgba(10,13,10,.94)); }
+.chart-panel { padding: 30px 32px 22px; min-height: 430px; }
+.panel-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+.panel-heading h2, .guard-panel h2, .about-panel h2 { margin: 0; font-size: 24px; letter-spacing: -.02em; }
+.chart-value { text-align: right; }
+.chart-value strong { display: block; font-size: 25px; }
+.chart-value span { font-family: monospace; font-size: 10px; }
+.chart { position: relative; height: 270px; margin-top: 28px; overflow: hidden; border-bottom: 1px solid var(--line); }
+.live-chart canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; }
+.chart-empty { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; color: var(--muted); font-family: monospace; font-size: 11px; z-index: 3; }
+.chart-empty[hidden] { display: none; }
+.chart-grid { position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, transparent 0, transparent 66px, var(--line-soft) 67px); }
+.area-fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(185,255,53,.5), rgba(185,255,53,.02));
+  clip-path: polygon(0 42%, 7% 29%, 13% 36%, 20% 36%, 27% 34%, 33% 36%, 40% 20%, 47% 30%, 53% 30%, 60% 30%, 67% 53%, 73% 65%, 80% 53%, 87% 53%, 93% 72%, 100% 95%, 100% 100%, 0 100%);
+}
+.chart.fresh .area-fill { clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%); }
+.chart.fresh .area-fill::before { clip-path: polygon(0 49.5%, 100% 49.5%, 100% 50.4%, 0 50.4%); }
+.chart.fresh .end-point { bottom: calc(50% - 4px); }
+.area-fill::before { content: ""; position: absolute; inset: 0; background: var(--green); clip-path: polygon(0 41.4%, 7% 28.4%, 13% 35.4%, 20% 35.4%, 27% 33.4%, 33% 35.4%, 40% 19.4%, 47% 29.4%, 53% 29.4%, 60% 29.4%, 67% 52.4%, 73% 64.4%, 80% 52.4%, 87% 52.4%, 93% 71.4%, 100% 94.4%, 100% 95.3%, 93% 72.3%, 87% 53.3%, 80% 53.3%, 73% 65.3%, 67% 53.3%, 60% 30.3%, 53% 30.3%, 47% 30.3%, 40% 20.3%, 33% 36.3%, 27% 34.3%, 20% 36.3%, 13% 36.3%, 7% 29.3%, 0 42.3%); }
+.end-point { position: absolute; right: 0; bottom: 2%; width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 15px var(--green); }
+.chart-high, .chart-low { position: absolute; right: 10px; color: var(--muted); font-family: monospace; font-size: 9px; }
+.chart-high { top: 7px; }
+.chart-low { bottom: 8px; }
+.chart-axis { display: flex; justify-content: space-between; margin-top: 12px; color: var(--muted); font-family: monospace; font-size: 9px; }
+.guard-panel { padding: 30px; display: flex; flex-direction: column; }
+.guard-icon { width: 64px; height: 64px; margin: 34px 0 24px; border: 1px solid var(--amber); border-radius: 50%; display: grid; place-items: center; color: var(--amber); font-family: monospace; font-weight: 800; box-shadow: inset 0 0 25px rgba(255,207,102,.07); }
+.guard-icon.active { border-color: var(--green); color: var(--green); box-shadow: inset 0 0 25px rgba(185,255,53,.08), 0 0 18px rgba(185,255,53,.05); }
+.guard-panel > p:not(.eyebrow) { color: var(--muted); line-height: 1.65; font-size: 14px; }
+.guard-result { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: end; }
+.guard-result span { color: var(--muted); font-size: 8px; }
+.guard-result strong { font-size: 20px; }
+.activity-panel, .about-panel { min-height: 360px; padding: 30px 32px; }
+.panel-heading.compact { padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.date-chip { border: 1px solid var(--line); color: var(--muted); padding: 8px 10px; font-size: 8px; }
+.activity-list { list-style: none; margin: 0; padding: 0; }
+.activity-panel .activity-list { height: 286px; overflow-y: auto; overscroll-behavior: contain; scrollbar-color: var(--line) transparent; padding-right: 8px; }
+.activity-list li { display: grid; grid-template-columns: 68px 10px 1fr; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--line-soft); }
+.activity-list li:last-child { border-bottom: 0; }
+.activity-list time { color: var(--muted); font-family: monospace; font-size: 10px; padding-top: 3px; }
+.activity-marker { width: 7px; height: 7px; margin-top: 4px; border-radius: 50%; background: var(--muted); }
+.activity-marker.alert { background: var(--amber); box-shadow: 0 0 9px rgba(255,207,102,.5); }
+.activity-marker.buy { background: var(--purple); }
+.activity-marker.sell { background: var(--green); }
+.activity-list strong { font-size: 13px; }
+.activity-list p { margin: 7px 0 0; color: var(--muted); line-height: 1.5; font-size: 12px; }
+.about-panel { display: flex; flex-direction: column; }
+.about-panel > p:not(.eyebrow) { max-width: 520px; color: var(--muted); line-height: 1.75; font-size: 14px; }
+.principles { margin-top: auto; display: grid; gap: 12px; padding-top: 25px; border-top: 1px solid var(--line); color: var(--green); font-size: 9px; }
+footer { display: flex; justify-content: space-between; gap: 50px; margin-top: 32px; padding: 28px 0 0; border-top: 1px solid var(--line); color: #677063; font-size: 8px; line-height: 1.8; }
+footer p { margin: 0; max-width: 680px; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; gap: 38px; }
+  .experiment-state { max-width: 520px; }
+  .metric-grid { grid-template-columns: 1fr 1fr; }
+  .metric:nth-child(2) { border-right: 0; }
+  .metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .main-grid, .lower-grid { grid-template-columns: 1fr; }
+  .guard-panel { min-height: 390px; }
+}
+
+@media (max-width: 580px) {
+  .shell { width: min(100% - 24px, 1180px); }
+  .site-header { height: 66px; }
+  .brand-muted { display: none; }
+  .content { padding-top: 52px; }
+  .hero { margin-bottom: 45px; }
+  h1 { font-size: 48px; }
+  .hero-copy { font-size: 15px; }
+  .metric-grid { grid-template-columns: 1fr; }
+  .metric { min-height: 130px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .metric:last-child { border-bottom: 0; }
+  .chart-panel, .guard-panel, .activity-panel, .about-panel { padding: 24px 20px; }
+  .chart { height: 220px; }
+  .chart-value { display: none; }
+  .activity-list li { grid-template-columns: 56px 8px 1fr; gap: 10px; }
+  footer { flex-direction: column; gap: 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+</style>
+  </head>
+  <body>
+    <main>
+      <header class="site-header shell">
+        <a class="brand" href="#top" aria-label="Orbit experiment home">
+          <span class="orbit-mark" aria-hidden="true"><span></span></span>
+          <span>ORBIT</span><span class="brand-muted">/ PUBLIC EXPERIMENT</span>
+        </a>
+        <div class="header-status" id="mirrorBadge" role="status"><span class="status-dot"></span>CONNECTING</div>
+      </header>
+
+      <div class="shell content" id="top">
+        <section class="hero">
+          <div>
+            <p class="eyebrow">SOLANA AI TRADING BOT · READ-ONLY MIRROR</p>
+            <h1>Learning in public,<br>one cycle at a time.</h1>
+            <p class="hero-copy">A sanitized view of an experimental bot testing automatic market selection, bounded entries, exits, and safety rules with simulated funds.</p>
+          </div>
+          <div class="experiment-state">
+            <span class="state-label">CURRENT STATE</span>
+            <strong class="running" id="currentState">CONNECTING</strong>
+            <p id="stateSummary">Loading the latest safe paper-trading snapshot.</p>
+          </div>
+        </section>
+
+        <section class="metric-grid" aria-label="Paper trading results">
+          <article class="metric primary-metric"><p>PORTFOLIO VALUE</p><strong id="portfolioValue">$100.00</strong><span id="portfolioBaseline">Simulated funds</span></article>
+          <article class="metric"><p>NET RESULT</p><strong id="netResult">$0.00</strong><span id="netPercent">0.00%</span></article>
+          <article class="metric"><p>RECENT TRADES</p><strong id="tradeCount">0</strong><span id="tradeCaption">Published fills</span></article>
+          <article class="metric"><p>SELECTED MARKET</p><strong id="marketSymbol">—</strong><span id="marketCaption">Waiting for data</span></article>
+        </section>
+
+        <section class="main-grid">
+          <article class="panel chart-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">PUBLIC PORTFOLIO TRACE</p><h2 id="chartHeading">Current paper session</h2></div>
+              <div class="chart-value"><strong id="chartValue">$100.00</strong><span id="chartChange">0.00% so far</span></div>
+            </div>
+            <div class="chart live-chart" role="img" aria-label="Paper portfolio value history">
+              <div class="chart-grid"></div>
+              <canvas id="portfolioChart"></canvas>
+              <span class="chart-high" id="chartHigh">$100.00</span><span class="chart-low" id="chartLow">$100.00</span>
+              <p class="chart-empty" id="chartEmpty">Collecting portfolio history…</p>
+            </div>
+            <div class="chart-axis"><span id="chartStart">—</span><span id="chartEnd">—</span></div>
+          </article>
+
+          <aside class="panel guard-panel">
+            <p class="eyebrow">LATEST DECISION</p><div class="guard-icon active" id="decisionIcon" aria-hidden="true">AI</div>
+            <h2 id="decisionTitle">Waiting for evidence</h2>
+            <p id="decisionText">The next public signal will appear after the bot publishes a market decision.</p>
+            <div class="guard-result"><span>OPEN EXPOSURE</span><strong id="openExposure">$0.00</strong></div>
+          </aside>
+        </section>
+
+        <section class="lower-grid">
+          <article class="panel activity-panel">
+            <div class="panel-heading compact"><div><p class="eyebrow">RECENT ACTIVITY</p><h2>What the bot did</h2></div><span class="date-chip" id="activityDate">LIVE</span></div>
+            <ol class="activity-list" id="activityList" aria-live="polite">
+              <li><time>—</time><span class="activity-marker"></span><div><strong>Connecting</strong><p>Waiting for the first sanitized paper-trading update.</p></div></li>
+            </ol>
+          </article>
+
+          <article class="panel about-panel">
+            <p class="eyebrow">THE EXPERIMENT</p><h2>Built to test, not promise.</h2>
+            <p>Orbit compares short- and longer-term momentum, liquidity, activity, modeled execution costs, and locked risk limits before making a simulated decision. Public updates contain results only—never wallet details, keys, mint addresses, or trading controls.</p>
+            <div class="principles"><span>01 · PAPER ONLY</span><span>02 · READ ONLY</span><span>03 · SANITIZED RESULTS</span></div>
+          </article>
+        </section>
+
+        <footer>
+          <p id="lastUpdated">Waiting for the first live snapshot.</p>
+          <p>Simulated paper-trading results only. No real funds are shown or traded here. This experiment is not financial advice and does not guarantee future performance.</p>
+        </footer>
+      </div>
+    </main>
+<script>
+const byId = (id) => document.getElementById(id);
+const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2 });
+let currentSnapshot = null;
+
+function formatMoney(value) {
+  return Number.isFinite(value) ? money.format(value) : "$—";
+}
+
+function formatPercent(value) {
+  return Number.isFinite(value) ? `${value >= 0 ? "+" : ""}${(value * 100).toFixed(2)}%` : "—";
+}
+
+function formatTime(value) {
+  return value ? new Date(value).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "—";
+}
+
+function formatDate(value) {
+  return value ? new Date(value).toLocaleDateString([], { month: "short", day: "numeric" }).toUpperCase() : "LIVE";
+}
+
+function setTone(element, value) {
+  element.classList.toggle("positive", value > 0);
+  element.classList.toggle("negative", value < 0);
+}
+
+function freshness(data) {
+  const ageMs = Date.now() - new Date(data.updatedAt).getTime();
+  const staleAfterMs = Math.max(180_000, Number(data.publishIntervalSeconds || 60) * 3_000);
+  return { fresh: Number.isFinite(ageMs) && ageMs <= staleAfterMs, ageMs };
+}
+
+function drawChart(history) {
+  const canvas = byId("portfolioChart");
+  const points = history.filter((point) => Number.isFinite(point.portfolioUsd));
+  const ratio = window.devicePixelRatio || 1;
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
+  canvas.width = Math.max(1, width * ratio);
+  canvas.height = Math.max(1, height * ratio);
+  const context = canvas.getContext("2d");
+  context.scale(ratio, ratio);
+  context.clearRect(0, 0, width, height);
+  byId("chartEmpty").hidden = points.length > 0;
+  if (!points.length) return;
+
+  const values = points.map((point) => point.portfolioUsd);
+  const minimum = Math.min(...values);
+  const maximum = Math.max(...values);
+  const spread = Math.max(maximum - minimum, Math.max(0.01, maximum * 0.0005));
+  const padding = 10;
+  const coordinates = values.map((value, index) => [
+    padding + (points.length === 1 ? 0.5 : index / (points.length - 1)) * (width - padding * 2),
+    padding + (maximum - value) / spread * (height - padding * 2)
+  ]);
+  const gradient = context.createLinearGradient(0, 0, 0, height);
+  gradient.addColorStop(0, "rgba(185,255,53,.32)");
+  gradient.addColorStop(1, "rgba(185,255,53,0)");
+  context.beginPath();
+  coordinates.forEach(([x, y], index) => index ? context.lineTo(x, y) : context.moveTo(x, y));
+  context.lineTo(coordinates.at(-1)[0], height);
+  context.lineTo(coordinates[0][0], height);
+  context.closePath();
+  context.fillStyle = gradient;
+  context.fill();
+  context.beginPath();
+  coordinates.forEach(([x, y], index) => index ? context.lineTo(x, y) : context.moveTo(x, y));
+  context.strokeStyle = "#b9ff35";
+  context.lineWidth = 1.5;
+  context.stroke();
+  const [x, y] = coordinates.at(-1);
+  context.beginPath();
+  context.arc(x, y, 3.5, 0, Math.PI * 2);
+  context.fillStyle = "#b9ff35";
+  context.fill();
+  byId("chartHigh").textContent = formatMoney(maximum);
+  byId("chartLow").textContent = formatMoney(minimum);
+  byId("chartStart").textContent = formatTime(points[0].timestamp);
+  byId("chartEnd").textContent = formatTime(points.at(-1).timestamp);
+}
+
+function renderActivity(activity) {
+  const list = byId("activityList");
+  list.replaceChildren();
+  if (!activity.length) {
+    const item = document.createElement("li");
+    const time = document.createElement("time");
+    const marker = document.createElement("span");
+    const copy = document.createElement("div");
+    const title = document.createElement("strong");
+    const detail = document.createElement("p");
+    time.textContent = "—";
+    marker.className = "activity-marker";
+    title.textContent = "No published activity yet";
+    detail.textContent = "The bot is collecting market evidence.";
+    copy.append(title, detail);
+    item.append(time, marker, copy);
+    list.append(item);
+    return;
+  }
+
+  activity.forEach((event) => {
+    const item = document.createElement("li");
+    const time = document.createElement("time");
+    const marker = document.createElement("span");
+    const copy = document.createElement("div");
+    const title = document.createElement("strong");
+    const detail = document.createElement("p");
+    const filled = event.result !== "no-action";
+    time.textContent = formatTime(event.timestamp);
+    marker.className = `activity-marker ${event.action === "BUY" ? "buy" : event.action === "SELL" ? "sell" : filled ? "alert" : ""}`;
+    title.textContent = filled ? `${event.action} ${event.symbol} · ${formatMoney(event.sizeUsd)}` : `${event.action} ${event.symbol}`;
+    detail.textContent = event.rationale || (filled ? "Simulated order filled." : "No simulated trade was placed.");
+    copy.append(title, detail);
+    item.append(time, marker, copy);
+    list.append(item);
+  });
+}
+
+function render(data) {
+  currentSnapshot = data;
+  const { fresh } = freshness(data);
+  const badge = byId("mirrorBadge");
+  badge.classList.toggle("stale", !fresh);
+  badge.innerHTML = '<span class="status-dot"></span>' + (fresh ? "LIVE MIRROR" : "OFFLINE SNAPSHOT");
+
+  const stateLabels = {
+    running: "TEST RUNNING",
+    paused: "BOT PAUSED",
+    warming: "MARKET WARM-UP",
+    "safety-locked": "SAFETY STOP"
+  };
+  const status = fresh ? data.status : "paused";
+  byId("currentState").textContent = fresh ? (stateLabels[status] || "TEST RUNNING") : "MIRROR OFFLINE";
+  byId("currentState").classList.toggle("running", fresh && status === "running");
+  byId("stateSummary").textContent = !fresh
+    ? "The last safe snapshot remains visible, but the local bot is not publishing new updates."
+    : status === "safety-locked"
+      ? "The paper safety circuit stopped the session and closed new entries."
+      : status === "paused"
+        ? "The local paper bot is paused; no new simulated decisions are being made."
+        : status === "warming"
+          ? `The selector chose ${data.asset.symbol} and is collecting market history.`
+          : `The bot is monitoring ${data.asset.symbol} and publishing sanitized results.`;
+
+  byId("portfolioValue").textContent = formatMoney(data.portfolioUsd);
+  byId("portfolioBaseline").textContent = `Started with ${formatMoney(data.initialPortfolioUsd)}`;
+  byId("netResult").textContent = `${data.pnlUsd >= 0 ? "+" : ""}${formatMoney(data.pnlUsd)}`;
+  byId("netPercent").textContent = formatPercent(data.pnlPercent);
+  setTone(byId("netResult"), data.pnlUsd);
+  setTone(byId("netPercent"), data.pnlUsd);
+  byId("tradeCount").textContent = String(data.tradeCount);
+  byId("tradeCaption").textContent = data.completedCycles ? `${data.completedCycles} completed grid cycles` : "Recent published fills";
+  byId("marketSymbol").textContent = data.asset.symbol;
+  byId("marketCaption").textContent = data.asset.name;
+  byId("chartValue").textContent = formatMoney(data.portfolioUsd);
+  byId("chartChange").textContent = `${formatPercent(data.pnlPercent)} so far`;
+  setTone(byId("chartChange"), data.pnlUsd);
+  byId("chartHeading").textContent = `${data.asset.symbol} paper session`;
+  byId("openExposure").textContent = formatMoney(data.positionUsd);
+
+  const decision = data.decision;
+  byId("decisionIcon").textContent = decision ? decision.action.slice(0, 1) : "AI";
+  byId("decisionTitle").textContent = decision
+    ? decision.action === "HOLD" ? "Holding for evidence" : `${decision.action} signal · ${Math.round(decision.confidence * 100)}%`
+    : "Waiting for evidence";
+  byId("decisionText").textContent = decision?.rationale || "The next public signal will appear after the bot publishes a market decision.";
+  renderActivity(data.activity || []);
+  byId("activityDate").textContent = formatDate(data.updatedAt);
+  const updated = new Date(data.updatedAt);
+  byId("lastUpdated").textContent = `${fresh ? "Live snapshot" : "Last snapshot"}: ${updated.toLocaleString([], { dateStyle: "medium", timeStyle: "short" })}.`;
+  drawChart(data.history || []);
+}
+
+async function refresh() {
+  try {
+    const statusPath = location.hostname.endsWith("github.io") ? "status.json" : "/api/status";
+    const response = await fetch(`${statusPath}?time=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`status ${response.status}`);
+    render(await response.json());
+  } catch {
+    byId("mirrorBadge").classList.add("stale");
+    byId("mirrorBadge").innerHTML = '<span class="status-dot"></span>OFFLINE SNAPSHOT';
+    if (currentSnapshot) render(currentSnapshot);
+  }
+}
+
+window.addEventListener("resize", () => currentSnapshot && drawChart(currentSnapshot.history || []));
+refresh();
+setInterval(refresh, 30_000);
+
+</script>
+  </body>
+</html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A public build log for an experimental Solana AI paper-trading bot.">
     <meta name="theme-color" content="#080b08">
     <meta property="og:title" content="Orbit — Learning in public">
