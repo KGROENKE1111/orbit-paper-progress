@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T09:21:40.637Z",
+  "updatedAt": "2026-08-01T09:26:40.736Z",
   "startedAt": "2026-07-31T16:41:41.000Z",
   "publishIntervalSeconds": 300,
   "mode": "paper",
@@ -12,12 +12,12 @@
     "name": "Manifesting"
   },
   "initialPortfolioUsd": 100,
-  "portfolioUsd": 100.2962538519447,
+  "portfolioUsd": 100.25994571259376,
   "cashUsd": 95.39749878684056,
-  "positionUsd": 4.898755065104143,
-  "tokenPriceUsd": 0.0055189634139106575,
-  "pnlUsd": 0.296253851944698,
-  "pnlPercent": 0.00296253851944698,
+  "positionUsd": 4.862446925753198,
+  "tokenPriceUsd": 0.005478058471728011,
+  "pnlUsd": 0.25994571259376187,
+  "pnlPercent": 0.0025994571259376187,
   "tradeCount": 0,
   "completedCycles": 5,
   "decision": {
@@ -29,406 +29,6 @@
   },
   "history": [
     {
-      "timestamp": "2026-08-01T09:15:43.415Z",
-      "portfolioUsd": 100.35854388004904
-    },
-    {
-      "timestamp": "2026-08-01T09:15:46.470Z",
-      "portfolioUsd": 100.35854388004904
-    },
-    {
-      "timestamp": "2026-08-01T09:15:49.417Z",
-      "portfolioUsd": 100.35854388004904
-    },
-    {
-      "timestamp": "2026-08-01T09:15:52.473Z",
-      "portfolioUsd": 100.35854388004904
-    },
-    {
-      "timestamp": "2026-08-01T09:15:55.415Z",
-      "portfolioUsd": 100.35854388004904
-    },
-    {
-      "timestamp": "2026-08-01T09:15:58.480Z",
-      "portfolioUsd": 100.3575888711342
-    },
-    {
-      "timestamp": "2026-08-01T09:16:01.411Z",
-      "portfolioUsd": 100.3575888711342
-    },
-    {
-      "timestamp": "2026-08-01T09:16:04.492Z",
-      "portfolioUsd": 100.35581542367915
-    },
-    {
-      "timestamp": "2026-08-01T09:16:07.414Z",
-      "portfolioUsd": 100.35581542367915
-    },
-    {
-      "timestamp": "2026-08-01T09:16:10.421Z",
-      "portfolioUsd": 100.35223738042583
-    },
-    {
-      "timestamp": "2026-08-01T09:16:13.430Z",
-      "portfolioUsd": 100.35223738042583
-    },
-    {
-      "timestamp": "2026-08-01T09:16:16.482Z",
-      "portfolioUsd": 100.36851057531698
-    },
-    {
-      "timestamp": "2026-08-01T09:16:19.419Z",
-      "portfolioUsd": 100.36851057531698
-    },
-    {
-      "timestamp": "2026-08-01T09:16:22.423Z",
-      "portfolioUsd": 100.3526538573279
-    },
-    {
-      "timestamp": "2026-08-01T09:16:25.426Z",
-      "portfolioUsd": 100.3526538573279
-    },
-    {
-      "timestamp": "2026-08-01T09:16:28.494Z",
-      "portfolioUsd": 100.3687771685173
-    },
-    {
-      "timestamp": "2026-08-01T09:16:31.424Z",
-      "portfolioUsd": 100.3687771685173
-    },
-    {
-      "timestamp": "2026-08-01T09:16:34.436Z",
-      "portfolioUsd": 100.3687771685173
-    },
-    {
-      "timestamp": "2026-08-01T09:16:37.433Z",
-      "portfolioUsd": 100.3687771685173
-    },
-    {
-      "timestamp": "2026-08-01T09:16:40.493Z",
-      "portfolioUsd": 100.35453477638222
-    },
-    {
-      "timestamp": "2026-08-01T09:16:43.435Z",
-      "portfolioUsd": 100.35453477638222
-    },
-    {
-      "timestamp": "2026-08-01T09:16:46.499Z",
-      "portfolioUsd": 100.35453477638222
-    },
-    {
-      "timestamp": "2026-08-01T09:16:49.438Z",
-      "portfolioUsd": 100.35453477638222
-    },
-    {
-      "timestamp": "2026-08-01T09:16:52.502Z",
-      "portfolioUsd": 100.35273574285586
-    },
-    {
-      "timestamp": "2026-08-01T09:16:55.437Z",
-      "portfolioUsd": 100.35273574285586
-    },
-    {
-      "timestamp": "2026-08-01T09:16:58.515Z",
-      "portfolioUsd": 100.36838088857267
-    },
-    {
-      "timestamp": "2026-08-01T09:17:01.440Z",
-      "portfolioUsd": 100.36838088857267
-    },
-    {
-      "timestamp": "2026-08-01T09:17:04.509Z",
-      "portfolioUsd": 100.34202997425716
-    },
-    {
-      "timestamp": "2026-08-01T09:17:07.443Z",
-      "portfolioUsd": 100.34202997425716
-    },
-    {
-      "timestamp": "2026-08-01T09:17:10.512Z",
-      "portfolioUsd": 100.35813661488002
-    },
-    {
-      "timestamp": "2026-08-01T09:17:13.447Z",
-      "portfolioUsd": 100.35813661488002
-    },
-    {
-      "timestamp": "2026-08-01T09:17:16.510Z",
-      "portfolioUsd": 100.3610246540628
-    },
-    {
-      "timestamp": "2026-08-01T09:17:19.451Z",
-      "portfolioUsd": 100.3610246540628
-    },
-    {
-      "timestamp": "2026-08-01T09:17:22.523Z",
-      "portfolioUsd": 100.32801523575851
-    },
-    {
-      "timestamp": "2026-08-01T09:17:25.450Z",
-      "portfolioUsd": 100.32801523575851
-    },
-    {
-      "timestamp": "2026-08-01T09:17:28.508Z",
-      "portfolioUsd": 100.32617016105853
-    },
-    {
-      "timestamp": "2026-08-01T09:17:31.447Z",
-      "portfolioUsd": 100.32617016105853
-    },
-    {
-      "timestamp": "2026-08-01T09:17:34.447Z",
-      "portfolioUsd": 100.32617016105853
-    },
-    {
-      "timestamp": "2026-08-01T09:17:37.450Z",
-      "portfolioUsd": 100.32617016105853
-    },
-    {
-      "timestamp": "2026-08-01T09:17:40.509Z",
-      "portfolioUsd": 100.32617016105853
-    },
-    {
-      "timestamp": "2026-08-01T09:17:43.448Z",
-      "portfolioUsd": 100.32617016105853
-    },
-    {
-      "timestamp": "2026-08-01T09:17:46.512Z",
-      "portfolioUsd": 100.28427589972618
-    },
-    {
-      "timestamp": "2026-08-01T09:17:49.450Z",
-      "portfolioUsd": 100.28427589972618
-    },
-    {
-      "timestamp": "2026-08-01T09:17:52.517Z",
-      "portfolioUsd": 100.28427589972618
-    },
-    {
-      "timestamp": "2026-08-01T09:17:55.449Z",
-      "portfolioUsd": 100.28427589972618
-    },
-    {
-      "timestamp": "2026-08-01T09:17:58.526Z",
-      "portfolioUsd": 100.31681331164368
-    },
-    {
-      "timestamp": "2026-08-01T09:18:01.450Z",
-      "portfolioUsd": 100.31681331164368
-    },
-    {
-      "timestamp": "2026-08-01T09:18:04.514Z",
-      "portfolioUsd": 100.31429438978466
-    },
-    {
-      "timestamp": "2026-08-01T09:18:07.453Z",
-      "portfolioUsd": 100.31429438978466
-    },
-    {
-      "timestamp": "2026-08-01T09:18:10.455Z",
-      "portfolioUsd": 100.31740774437294
-    },
-    {
-      "timestamp": "2026-08-01T09:18:13.458Z",
-      "portfolioUsd": 100.31740774437294
-    },
-    {
-      "timestamp": "2026-08-01T09:18:16.525Z",
-      "portfolioUsd": 100.31740774437294
-    },
-    {
-      "timestamp": "2026-08-01T09:18:19.465Z",
-      "portfolioUsd": 100.31740774437294
-    },
-    {
-      "timestamp": "2026-08-01T09:18:22.532Z",
-      "portfolioUsd": 100.31740774437294
-    },
-    {
-      "timestamp": "2026-08-01T09:18:25.459Z",
-      "portfolioUsd": 100.31740774437294
-    },
-    {
-      "timestamp": "2026-08-01T09:18:28.463Z",
-      "portfolioUsd": 100.31740774437294
-    },
-    {
-      "timestamp": "2026-08-01T09:18:31.465Z",
-      "portfolioUsd": 100.31740774437294
-    },
-    {
-      "timestamp": "2026-08-01T09:18:34.532Z",
-      "portfolioUsd": 100.28443610362118
-    },
-    {
-      "timestamp": "2026-08-01T09:18:37.467Z",
-      "portfolioUsd": 100.28443610362118
-    },
-    {
-      "timestamp": "2026-08-01T09:18:40.545Z",
-      "portfolioUsd": 100.31856380317346
-    },
-    {
-      "timestamp": "2026-08-01T09:18:43.475Z",
-      "portfolioUsd": 100.31856380317346
-    },
-    {
-      "timestamp": "2026-08-01T09:18:46.539Z",
-      "portfolioUsd": 100.32524090002376
-    },
-    {
-      "timestamp": "2026-08-01T09:18:49.492Z",
-      "portfolioUsd": 100.32524090002376
-    },
-    {
-      "timestamp": "2026-08-01T09:18:52.633Z",
-      "portfolioUsd": 100.33046574502282
-    },
-    {
-      "timestamp": "2026-08-01T09:18:55.475Z",
-      "portfolioUsd": 100.33046574502282
-    },
-    {
-      "timestamp": "2026-08-01T09:18:58.550Z",
-      "portfolioUsd": 100.29662350835257
-    },
-    {
-      "timestamp": "2026-08-01T09:19:01.481Z",
-      "portfolioUsd": 100.29662350835257
-    },
-    {
-      "timestamp": "2026-08-01T09:19:04.546Z",
-      "portfolioUsd": 100.29662350835257
-    },
-    {
-      "timestamp": "2026-08-01T09:19:07.489Z",
-      "portfolioUsd": 100.29662350835257
-    },
-    {
-      "timestamp": "2026-08-01T09:19:10.549Z",
-      "portfolioUsd": 100.29662350835257
-    },
-    {
-      "timestamp": "2026-08-01T09:19:13.500Z",
-      "portfolioUsd": 100.29662350835257
-    },
-    {
-      "timestamp": "2026-08-01T09:19:16.492Z",
-      "portfolioUsd": 100.29662350835257
-    },
-    {
-      "timestamp": "2026-08-01T09:19:19.501Z",
-      "portfolioUsd": 100.29662350835257
-    },
-    {
-      "timestamp": "2026-08-01T09:19:22.560Z",
-      "portfolioUsd": 100.29026859112173
-    },
-    {
-      "timestamp": "2026-08-01T09:19:25.502Z",
-      "portfolioUsd": 100.29026859112173
-    },
-    {
-      "timestamp": "2026-08-01T09:19:28.568Z",
-      "portfolioUsd": 100.32373051060058
-    },
-    {
-      "timestamp": "2026-08-01T09:19:31.506Z",
-      "portfolioUsd": 100.32373051060058
-    },
-    {
-      "timestamp": "2026-08-01T09:19:34.570Z",
-      "portfolioUsd": 100.29130403940869
-    },
-    {
-      "timestamp": "2026-08-01T09:19:37.515Z",
-      "portfolioUsd": 100.29130403940869
-    },
-    {
-      "timestamp": "2026-08-01T09:19:40.571Z",
-      "portfolioUsd": 100.3334100139016
-    },
-    {
-      "timestamp": "2026-08-01T09:19:43.511Z",
-      "portfolioUsd": 100.3334100139016
-    },
-    {
-      "timestamp": "2026-08-01T09:19:46.576Z",
-      "portfolioUsd": 100.2990577516777
-    },
-    {
-      "timestamp": "2026-08-01T09:19:49.515Z",
-      "portfolioUsd": 100.2990577516777
-    },
-    {
-      "timestamp": "2026-08-01T09:19:52.516Z",
-      "portfolioUsd": 100.2990577516777
-    },
-    {
-      "timestamp": "2026-08-01T09:19:55.520Z",
-      "portfolioUsd": 100.2990577516777
-    },
-    {
-      "timestamp": "2026-08-01T09:19:58.588Z",
-      "portfolioUsd": 100.2990577516777
-    },
-    {
-      "timestamp": "2026-08-01T09:20:01.530Z",
-      "portfolioUsd": 100.2990577516777
-    },
-    {
-      "timestamp": "2026-08-01T09:20:04.597Z",
-      "portfolioUsd": 100.2990577516777
-    },
-    {
-      "timestamp": "2026-08-01T09:20:07.524Z",
-      "portfolioUsd": 100.2990577516777
-    },
-    {
-      "timestamp": "2026-08-01T09:20:10.594Z",
-      "portfolioUsd": 100.2990577516777
-    },
-    {
-      "timestamp": "2026-08-01T09:20:13.529Z",
-      "portfolioUsd": 100.2990577516777
-    },
-    {
-      "timestamp": "2026-08-01T09:20:16.602Z",
-      "portfolioUsd": 100.33019267210375
-    },
-    {
-      "timestamp": "2026-08-01T09:20:19.531Z",
-      "portfolioUsd": 100.33019267210375
-    },
-    {
-      "timestamp": "2026-08-01T09:20:22.597Z",
-      "portfolioUsd": 100.29626889754361
-    },
-    {
-      "timestamp": "2026-08-01T09:20:25.536Z",
-      "portfolioUsd": 100.29626889754361
-    },
-    {
-      "timestamp": "2026-08-01T09:20:28.604Z",
-      "portfolioUsd": 100.32817952104246
-    },
-    {
-      "timestamp": "2026-08-01T09:20:31.539Z",
-      "portfolioUsd": 100.32817952104246
-    },
-    {
-      "timestamp": "2026-08-01T09:20:34.541Z",
-      "portfolioUsd": 100.29481725446678
-    },
-    {
-      "timestamp": "2026-08-01T09:20:37.537Z",
-      "portfolioUsd": 100.29481725446678
-    },
-    {
-      "timestamp": "2026-08-01T09:20:40.603Z",
-      "portfolioUsd": 100.2784434294854
-    },
-    {
       "timestamp": "2026-08-01T09:20:43.545Z",
       "portfolioUsd": 100.2784434294854
     },
@@ -507,276 +107,676 @@
     {
       "timestamp": "2026-08-01T09:21:40.637Z",
       "portfolioUsd": 100.2962538519447
+    },
+    {
+      "timestamp": "2026-08-01T09:21:43.575Z",
+      "portfolioUsd": 100.2962538519447
+    },
+    {
+      "timestamp": "2026-08-01T09:21:46.637Z",
+      "portfolioUsd": 100.2962538519447
+    },
+    {
+      "timestamp": "2026-08-01T09:21:49.573Z",
+      "portfolioUsd": 100.2962538519447
+    },
+    {
+      "timestamp": "2026-08-01T09:21:52.637Z",
+      "portfolioUsd": 100.2962538519447
+    },
+    {
+      "timestamp": "2026-08-01T09:21:55.581Z",
+      "portfolioUsd": 100.2962538519447
+    },
+    {
+      "timestamp": "2026-08-01T09:21:58.644Z",
+      "portfolioUsd": 100.26178760100171
+    },
+    {
+      "timestamp": "2026-08-01T09:22:01.582Z",
+      "portfolioUsd": 100.26178760100171
+    },
+    {
+      "timestamp": "2026-08-01T09:22:04.649Z",
+      "portfolioUsd": 100.29458364677643
+    },
+    {
+      "timestamp": "2026-08-01T09:22:07.588Z",
+      "portfolioUsd": 100.29458364677643
+    },
+    {
+      "timestamp": "2026-08-01T09:22:10.665Z",
+      "portfolioUsd": 100.30063724966594
+    },
+    {
+      "timestamp": "2026-08-01T09:22:13.596Z",
+      "portfolioUsd": 100.30063724966594
+    },
+    {
+      "timestamp": "2026-08-01T09:22:16.599Z",
+      "portfolioUsd": 100.26704996775214
+    },
+    {
+      "timestamp": "2026-08-01T09:22:19.606Z",
+      "portfolioUsd": 100.26704996775214
+    },
+    {
+      "timestamp": "2026-08-01T09:22:22.659Z",
+      "portfolioUsd": 100.3001497591908
+    },
+    {
+      "timestamp": "2026-08-01T09:22:25.604Z",
+      "portfolioUsd": 100.3001497591908
+    },
+    {
+      "timestamp": "2026-08-01T09:22:28.665Z",
+      "portfolioUsd": 100.3001497591908
+    },
+    {
+      "timestamp": "2026-08-01T09:22:31.601Z",
+      "portfolioUsd": 100.3001497591908
+    },
+    {
+      "timestamp": "2026-08-01T09:22:34.663Z",
+      "portfolioUsd": 100.3001497591908
+    },
+    {
+      "timestamp": "2026-08-01T09:22:37.607Z",
+      "portfolioUsd": 100.3001497591908
+    },
+    {
+      "timestamp": "2026-08-01T09:22:40.604Z",
+      "portfolioUsd": 100.3001497591908
+    },
+    {
+      "timestamp": "2026-08-01T09:22:43.603Z",
+      "portfolioUsd": 100.3001497591908
+    },
+    {
+      "timestamp": "2026-08-01T09:22:46.669Z",
+      "portfolioUsd": 100.26687391900083
+    },
+    {
+      "timestamp": "2026-08-01T09:22:49.607Z",
+      "portfolioUsd": 100.26687391900083
+    },
+    {
+      "timestamp": "2026-08-01T09:22:52.683Z",
+      "portfolioUsd": 100.26064772477042
+    },
+    {
+      "timestamp": "2026-08-01T09:22:55.622Z",
+      "portfolioUsd": 100.26064772477042
+    },
+    {
+      "timestamp": "2026-08-01T09:22:58.695Z",
+      "portfolioUsd": 100.29353109678495
+    },
+    {
+      "timestamp": "2026-08-01T09:23:01.619Z",
+      "portfolioUsd": 100.29353109678495
+    },
+    {
+      "timestamp": "2026-08-01T09:23:04.619Z",
+      "portfolioUsd": 100.29973075667615
+    },
+    {
+      "timestamp": "2026-08-01T09:23:07.627Z",
+      "portfolioUsd": 100.29973075667615
+    },
+    {
+      "timestamp": "2026-08-01T09:23:10.690Z",
+      "portfolioUsd": 100.30159055218701
+    },
+    {
+      "timestamp": "2026-08-01T09:23:13.628Z",
+      "portfolioUsd": 100.30159055218701
+    },
+    {
+      "timestamp": "2026-08-01T09:23:16.627Z",
+      "portfolioUsd": 100.30159055218701
+    },
+    {
+      "timestamp": "2026-08-01T09:23:19.630Z",
+      "portfolioUsd": 100.30159055218701
+    },
+    {
+      "timestamp": "2026-08-01T09:23:22.695Z",
+      "portfolioUsd": 100.27139390401192
+    },
+    {
+      "timestamp": "2026-08-01T09:23:25.644Z",
+      "portfolioUsd": 100.27139390401192
+    },
+    {
+      "timestamp": "2026-08-01T09:23:28.707Z",
+      "portfolioUsd": 100.27139390401192
+    },
+    {
+      "timestamp": "2026-08-01T09:23:31.637Z",
+      "portfolioUsd": 100.27139390401192
+    },
+    {
+      "timestamp": "2026-08-01T09:23:34.702Z",
+      "portfolioUsd": 100.27139390401192
+    },
+    {
+      "timestamp": "2026-08-01T09:23:37.648Z",
+      "portfolioUsd": 100.27139390401192
+    },
+    {
+      "timestamp": "2026-08-01T09:23:40.706Z",
+      "portfolioUsd": 100.30764624669443
+    },
+    {
+      "timestamp": "2026-08-01T09:23:43.645Z",
+      "portfolioUsd": 100.30764624669443
+    },
+    {
+      "timestamp": "2026-08-01T09:23:46.647Z",
+      "portfolioUsd": 100.30550778411693
+    },
+    {
+      "timestamp": "2026-08-01T09:23:49.657Z",
+      "portfolioUsd": 100.30550778411693
+    },
+    {
+      "timestamp": "2026-08-01T09:23:52.731Z",
+      "portfolioUsd": 100.2695642932478
+    },
+    {
+      "timestamp": "2026-08-01T09:23:55.665Z",
+      "portfolioUsd": 100.2695642932478
+    },
+    {
+      "timestamp": "2026-08-01T09:23:58.726Z",
+      "portfolioUsd": 100.30297233491112
+    },
+    {
+      "timestamp": "2026-08-01T09:24:01.653Z",
+      "portfolioUsd": 100.30297233491112
+    },
+    {
+      "timestamp": "2026-08-01T09:24:04.722Z",
+      "portfolioUsd": 100.30327241462467
+    },
+    {
+      "timestamp": "2026-08-01T09:24:07.660Z",
+      "portfolioUsd": 100.30327241462467
+    },
+    {
+      "timestamp": "2026-08-01T09:24:10.721Z",
+      "portfolioUsd": 100.30327241462467
+    },
+    {
+      "timestamp": "2026-08-01T09:24:13.661Z",
+      "portfolioUsd": 100.30327241462467
+    },
+    {
+      "timestamp": "2026-08-01T09:24:16.724Z",
+      "portfolioUsd": 100.30327241462467
+    },
+    {
+      "timestamp": "2026-08-01T09:24:19.662Z",
+      "portfolioUsd": 100.30327241462467
+    },
+    {
+      "timestamp": "2026-08-01T09:24:22.726Z",
+      "portfolioUsd": 100.30327241462467
+    },
+    {
+      "timestamp": "2026-08-01T09:24:25.673Z",
+      "portfolioUsd": 100.30327241462467
+    },
+    {
+      "timestamp": "2026-08-01T09:24:28.665Z",
+      "portfolioUsd": 100.30327241462467
+    },
+    {
+      "timestamp": "2026-08-01T09:24:31.667Z",
+      "portfolioUsd": 100.30327241462467
+    },
+    {
+      "timestamp": "2026-08-01T09:24:34.731Z",
+      "portfolioUsd": 100.27065679278452
+    },
+    {
+      "timestamp": "2026-08-01T09:24:37.668Z",
+      "portfolioUsd": 100.27065679278452
+    },
+    {
+      "timestamp": "2026-08-01T09:24:40.738Z",
+      "portfolioUsd": 100.26561453055345
+    },
+    {
+      "timestamp": "2026-08-01T09:24:43.689Z",
+      "portfolioUsd": 100.26561453055345
+    },
+    {
+      "timestamp": "2026-08-01T09:24:46.736Z",
+      "portfolioUsd": 100.2990416662561
+    },
+    {
+      "timestamp": "2026-08-01T09:24:49.673Z",
+      "portfolioUsd": 100.2990416662561
+    },
+    {
+      "timestamp": "2026-08-01T09:24:52.743Z",
+      "portfolioUsd": 100.3053728037488
+    },
+    {
+      "timestamp": "2026-08-01T09:24:55.675Z",
+      "portfolioUsd": 100.3053728037488
+    },
+    {
+      "timestamp": "2026-08-01T09:24:58.738Z",
+      "portfolioUsd": 100.27981463622984
+    },
+    {
+      "timestamp": "2026-08-01T09:25:01.678Z",
+      "portfolioUsd": 100.27981463622984
+    },
+    {
+      "timestamp": "2026-08-01T09:25:04.753Z",
+      "portfolioUsd": 100.27981463622984
+    },
+    {
+      "timestamp": "2026-08-01T09:25:07.680Z",
+      "portfolioUsd": 100.27981463622984
+    },
+    {
+      "timestamp": "2026-08-01T09:25:10.682Z",
+      "portfolioUsd": 100.2768164658533
+    },
+    {
+      "timestamp": "2026-08-01T09:25:13.689Z",
+      "portfolioUsd": 100.2768164658533
+    },
+    {
+      "timestamp": "2026-08-01T09:25:16.758Z",
+      "portfolioUsd": 100.26625588382981
+    },
+    {
+      "timestamp": "2026-08-01T09:25:19.693Z",
+      "portfolioUsd": 100.26625588382981
+    },
+    {
+      "timestamp": "2026-08-01T09:25:22.759Z",
+      "portfolioUsd": 100.26625588382981
+    },
+    {
+      "timestamp": "2026-08-01T09:25:25.685Z",
+      "portfolioUsd": 100.26625588382981
+    },
+    {
+      "timestamp": "2026-08-01T09:25:28.751Z",
+      "portfolioUsd": 100.2623188154321
+    },
+    {
+      "timestamp": "2026-08-01T09:25:31.692Z",
+      "portfolioUsd": 100.2623188154321
+    },
+    {
+      "timestamp": "2026-08-01T09:25:34.767Z",
+      "portfolioUsd": 100.29110824699131
+    },
+    {
+      "timestamp": "2026-08-01T09:25:37.694Z",
+      "portfolioUsd": 100.29110824699131
+    },
+    {
+      "timestamp": "2026-08-01T09:25:40.757Z",
+      "portfolioUsd": 100.29579759833861
+    },
+    {
+      "timestamp": "2026-08-01T09:25:43.698Z",
+      "portfolioUsd": 100.29579759833861
+    },
+    {
+      "timestamp": "2026-08-01T09:25:46.699Z",
+      "portfolioUsd": 100.26353437031153
+    },
+    {
+      "timestamp": "2026-08-01T09:25:49.705Z",
+      "portfolioUsd": 100.26353437031153
+    },
+    {
+      "timestamp": "2026-08-01T09:25:52.769Z",
+      "portfolioUsd": 100.28977446804593
+    },
+    {
+      "timestamp": "2026-08-01T09:25:55.861Z",
+      "portfolioUsd": 100.28977446804593
+    },
+    {
+      "timestamp": "2026-08-01T09:25:58.771Z",
+      "portfolioUsd": 100.25881336425746
+    },
+    {
+      "timestamp": "2026-08-01T09:26:01.720Z",
+      "portfolioUsd": 100.25881336425746
+    },
+    {
+      "timestamp": "2026-08-01T09:26:04.779Z",
+      "portfolioUsd": 100.25881336425746
+    },
+    {
+      "timestamp": "2026-08-01T09:26:07.710Z",
+      "portfolioUsd": 100.25881336425746
+    },
+    {
+      "timestamp": "2026-08-01T09:26:10.776Z",
+      "portfolioUsd": 100.25881336425746
+    },
+    {
+      "timestamp": "2026-08-01T09:26:13.717Z",
+      "portfolioUsd": 100.25881336425746
+    },
+    {
+      "timestamp": "2026-08-01T09:26:16.781Z",
+      "portfolioUsd": 100.25881336425746
+    },
+    {
+      "timestamp": "2026-08-01T09:26:19.726Z",
+      "portfolioUsd": 100.25881336425746
+    },
+    {
+      "timestamp": "2026-08-01T09:26:22.721Z",
+      "portfolioUsd": 100.29458943440869
+    },
+    {
+      "timestamp": "2026-08-01T09:26:25.724Z",
+      "portfolioUsd": 100.29458943440869
+    },
+    {
+      "timestamp": "2026-08-01T09:26:28.790Z",
+      "portfolioUsd": 100.30121257167198
+    },
+    {
+      "timestamp": "2026-08-01T09:26:31.726Z",
+      "portfolioUsd": 100.30121257167198
+    },
+    {
+      "timestamp": "2026-08-01T09:26:34.804Z",
+      "portfolioUsd": 100.26389925441013
+    },
+    {
+      "timestamp": "2026-08-01T09:26:37.730Z",
+      "portfolioUsd": 100.26389925441013
+    },
+    {
+      "timestamp": "2026-08-01T09:26:40.736Z",
+      "portfolioUsd": 100.25994571259376
     }
   ],
   "activity": [
     {
-      "timestamp": "2026-08-01T09:21:40.637Z",
+      "timestamp": "2026-08-01T09:26:40.736Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.0055189634139106575,
+      "priceUsd": 0.005478058471728011,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:37.579Z",
+      "timestamp": "2026-08-01T09:26:37.730Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.0055189634139106575,
+      "priceUsd": 0.0054825125528874105,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:34.635Z",
+      "timestamp": "2026-08-01T09:26:34.804Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.0055189634139106575,
+      "priceUsd": 0.0054825125528874105,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:31.567Z",
+      "timestamp": "2026-08-01T09:26:31.726Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.0055189634139106575,
+      "priceUsd": 0.0055245499338307125,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:28.627Z",
+      "timestamp": "2026-08-01T09:26:28.790Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.0055189634139106575,
+      "priceUsd": 0.0055245499338307125,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:25.561Z",
+      "timestamp": "2026-08-01T09:26:25.724Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005522570071527323,
+      "priceUsd": 0.00551708827229516,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:22.571Z",
+      "timestamp": "2026-08-01T09:26:22.721Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005522570071527323,
+      "priceUsd": 0.00551708827229516,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:19.556Z",
+      "timestamp": "2026-08-01T09:26:19.726Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005486264637822464,
+      "priceUsd": 0.005476782762092255,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:16.628Z",
+      "timestamp": "2026-08-01T09:26:16.781Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005486264637822464,
+      "priceUsd": 0.005476782762092255,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:13.554Z",
+      "timestamp": "2026-08-01T09:26:13.717Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005495613598518531,
+      "priceUsd": 0.005476782762092255,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:10.618Z",
+      "timestamp": "2026-08-01T09:26:10.776Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005495613598518531,
+      "priceUsd": 0.005476782762092255,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:07.550Z",
+      "timestamp": "2026-08-01T09:26:07.710Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005524037766877243,
+      "priceUsd": 0.005476782762092255,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:04.617Z",
+      "timestamp": "2026-08-01T09:26:04.779Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005524037766877243,
+      "priceUsd": 0.005476782762092255,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:21:01.562Z",
+      "timestamp": "2026-08-01T09:26:01.720Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005483344730982946,
+      "priceUsd": 0.005476782762092255,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:58.611Z",
+      "timestamp": "2026-08-01T09:25:58.771Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005483344730982946,
+      "priceUsd": 0.005476782762092255,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:55.558Z",
+      "timestamp": "2026-08-01T09:25:55.861Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005483344730982946,
+      "priceUsd": 0.0055116637056772935,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:52.608Z",
+      "timestamp": "2026-08-01T09:25:52.769Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005483344730982946,
+      "priceUsd": 0.0055116637056772935,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:49.541Z",
+      "timestamp": "2026-08-01T09:25:49.705Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005483344730982946,
+      "priceUsd": 0.005482101472528461,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:46.604Z",
+      "timestamp": "2026-08-01T09:25:46.699Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005483344730982946,
+      "priceUsd": 0.005482101472528461,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:43.545Z",
+      "timestamp": "2026-08-01T09:25:43.698Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005498898097594,
+      "priceUsd": 0.005518449396180437,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:40.603Z",
+      "timestamp": "2026-08-01T09:25:40.757Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005498898097594,
+      "priceUsd": 0.005518449396180437,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:37.537Z",
+      "timestamp": "2026-08-01T09:25:37.694Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005517344935579779,
+      "priceUsd": 0.005513166348104606,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:34.541Z",
+      "timestamp": "2026-08-01T09:25:34.767Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005517344935579779,
+      "priceUsd": 0.005513166348104606,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:31.539Z",
+      "timestamp": "2026-08-01T09:25:31.692Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005554931041884193,
+      "priceUsd": 0.005480732021960296,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:28.604Z",
+      "timestamp": "2026-08-01T09:25:28.751Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005554931041884193,
+      "priceUsd": 0.005480732021960296,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:25.536Z",
+      "timestamp": "2026-08-01T09:25:25.685Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005518980364362114,
+      "priceUsd": 0.005485167544078938,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:22.597Z",
+      "timestamp": "2026-08-01T09:25:22.759Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005518980364362114,
+      "priceUsd": 0.005485167544078938,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:19.531Z",
+      "timestamp": "2026-08-01T09:25:19.693Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005557199068537139,
+      "priceUsd": 0.005485167544078938,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:16.602Z",
+      "timestamp": "2026-08-01T09:25:16.758Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005557199068537139,
+      "priceUsd": 0.005485167544078938,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     },
     {
-      "timestamp": "2026-08-01T09:20:13.529Z",
+      "timestamp": "2026-08-01T09:25:13.689Z",
       "symbol": "MANIFEST",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.0055221223022071785,
+      "priceUsd": 0.005497065151745106,
       "result": "no-action",
       "rationale": "Price remains between grid levels. Waiting for the next crossing."
     }
