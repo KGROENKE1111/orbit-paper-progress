@@ -1,237 +1,33 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-02T07:36:40.744Z",
+  "updatedAt": "2026-08-02T07:39:13.915Z",
   "startedAt": "2026-07-31T16:41:41.000Z",
   "publishIntervalSeconds": 300,
   "mode": "paper",
-  "paused": false,
+  "paused": true,
   "healthy": true,
-  "status": "running",
+  "status": "safety-locked",
   "asset": {
     "symbol": "KINS",
     "name": "Kintara"
   },
   "initialPortfolioUsd": 100,
-  "portfolioUsd": 100.86725203827116,
-  "cashUsd": 95.8897508746869,
-  "positionUsd": 4.977501163584268,
-  "tokenPriceUsd": 0.005436507170443403,
-  "pnlUsd": 0.867252038271161,
-  "pnlPercent": 0.00867252038271161,
-  "tradeCount": 0,
-  "completedCycles": 0,
+  "portfolioUsd": 100.43370437346745,
+  "cashUsd": 100.43370437346745,
+  "positionUsd": 0,
+  "tokenPriceUsd": 0.005015317010433057,
+  "pnlUsd": 0.4337043734674495,
+  "pnlPercent": 0.004337043734674495,
+  "tradeCount": 1,
+  "completedCycles": 2,
   "decision": {
-    "action": "HOLD",
+    "action": "SELL",
     "confidence": 1,
-    "sizeUsd": 0,
-    "rationale": "Price remains between grid levels. Waiting for the next crossing.",
-    "executed": false
+    "sizeUsd": 4.591872220990462,
+    "rationale": "Circuit breaker: KINS fell 8.2% below its average entry. Closing the complete paper position.",
+    "executed": true
   },
   "history": [
-    {
-      "timestamp": "2026-08-02T07:30:43.549Z",
-      "portfolioUsd": 100.86285608334612
-    },
-    {
-      "timestamp": "2026-08-02T07:30:46.491Z",
-      "portfolioUsd": 100.86285608334612
-    },
-    {
-      "timestamp": "2026-08-02T07:30:49.555Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:30:52.491Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:30:55.557Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:30:58.493Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:01.561Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:04.498Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:07.625Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:10.502Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:13.568Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:16.507Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:19.572Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:22.514Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:25.584Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:28.511Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:31.513Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:34.518Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:37.624Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:40.523Z",
-      "portfolioUsd": 100.86402970729469
-    },
-    {
-      "timestamp": "2026-08-02T07:31:43.582Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:31:46.557Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:31:49.597Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:31:52.528Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:31:55.529Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:31:58.538Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:32:01.596Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:32:04.536Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:32:07.633Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:32:10.541Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:32:13.601Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:32:16.542Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:32:19.604Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:32:22.553Z",
-      "portfolioUsd": 100.8639241017836
-    },
-    {
-      "timestamp": "2026-08-02T07:32:25.604Z",
-      "portfolioUsd": 100.86360472548625
-    },
-    {
-      "timestamp": "2026-08-02T07:32:28.549Z",
-      "portfolioUsd": 100.86360472548625
-    },
-    {
-      "timestamp": "2026-08-02T07:32:31.607Z",
-      "portfolioUsd": 100.86360472548625
-    },
-    {
-      "timestamp": "2026-08-02T07:32:34.556Z",
-      "portfolioUsd": 100.86360472548625
-    },
-    {
-      "timestamp": "2026-08-02T07:32:37.629Z",
-      "portfolioUsd": 100.86360472548625
-    },
-    {
-      "timestamp": "2026-08-02T07:32:40.551Z",
-      "portfolioUsd": 100.86360472548625
-    },
-    {
-      "timestamp": "2026-08-02T07:32:43.615Z",
-      "portfolioUsd": 100.86417742833257
-    },
-    {
-      "timestamp": "2026-08-02T07:32:46.556Z",
-      "portfolioUsd": 100.86417742833257
-    },
-    {
-      "timestamp": "2026-08-02T07:32:49.613Z",
-      "portfolioUsd": 100.86417742833257
-    },
-    {
-      "timestamp": "2026-08-02T07:32:52.554Z",
-      "portfolioUsd": 100.86417742833257
-    },
-    {
-      "timestamp": "2026-08-02T07:32:55.555Z",
-      "portfolioUsd": 100.86417742833257
-    },
-    {
-      "timestamp": "2026-08-02T07:32:58.572Z",
-      "portfolioUsd": 100.86417742833257
-    },
-    {
-      "timestamp": "2026-08-02T07:33:01.620Z",
-      "portfolioUsd": 100.86417742833257
-    },
-    {
-      "timestamp": "2026-08-02T07:33:04.565Z",
-      "portfolioUsd": 100.86417742833257
-    },
-    {
-      "timestamp": "2026-08-02T07:33:07.628Z",
-      "portfolioUsd": 100.86417742833257
-    },
-    {
-      "timestamp": "2026-08-02T07:33:10.570Z",
-      "portfolioUsd": 100.86417742833257
-    },
-    {
-      "timestamp": "2026-08-02T07:33:13.624Z",
-      "portfolioUsd": 100.86417742833257
-    },
     {
       "timestamp": "2026-08-02T07:33:16.566Z",
       "portfolioUsd": 100.86417742833257
@@ -507,278 +303,482 @@
     {
       "timestamp": "2026-08-02T07:36:40.744Z",
       "portfolioUsd": 100.86725203827116
+    },
+    {
+      "timestamp": "2026-08-02T07:36:43.810Z",
+      "portfolioUsd": 100.8193745321749
+    },
+    {
+      "timestamp": "2026-08-02T07:36:46.744Z",
+      "portfolioUsd": 100.8193745321749
+    },
+    {
+      "timestamp": "2026-08-02T07:36:49.809Z",
+      "portfolioUsd": 100.78878161955583
+    },
+    {
+      "timestamp": "2026-08-02T07:36:52.761Z",
+      "portfolioUsd": 100.78878161955583
+    },
+    {
+      "timestamp": "2026-08-02T07:36:55.811Z",
+      "portfolioUsd": 100.7736841367213
+    },
+    {
+      "timestamp": "2026-08-02T07:36:58.758Z",
+      "portfolioUsd": 100.7736841367213
+    },
+    {
+      "timestamp": "2026-08-02T07:37:01.757Z",
+      "portfolioUsd": 100.71080886557391
+    },
+    {
+      "timestamp": "2026-08-02T07:37:04.757Z",
+      "portfolioUsd": 100.71080886557391
+    },
+    {
+      "timestamp": "2026-08-02T07:37:07.823Z",
+      "portfolioUsd": 100.68577919906262
+    },
+    {
+      "timestamp": "2026-08-02T07:37:10.760Z",
+      "portfolioUsd": 100.68577919906262
+    },
+    {
+      "timestamp": "2026-08-02T07:37:13.827Z",
+      "portfolioUsd": 100.66695411133335
+    },
+    {
+      "timestamp": "2026-08-02T07:37:16.763Z",
+      "portfolioUsd": 100.66695411133335
+    },
+    {
+      "timestamp": "2026-08-02T07:37:19.828Z",
+      "portfolioUsd": 100.66695411133335
+    },
+    {
+      "timestamp": "2026-08-02T07:37:22.770Z",
+      "portfolioUsd": 100.66695411133335
+    },
+    {
+      "timestamp": "2026-08-02T07:37:25.833Z",
+      "portfolioUsd": 100.66695411133335
+    },
+    {
+      "timestamp": "2026-08-02T07:37:28.773Z",
+      "portfolioUsd": 100.66695411133335
+    },
+    {
+      "timestamp": "2026-08-02T07:37:31.836Z",
+      "portfolioUsd": 100.66695411133335
+    },
+    {
+      "timestamp": "2026-08-02T07:37:34.782Z",
+      "portfolioUsd": 100.66695411133335
+    },
+    {
+      "timestamp": "2026-08-02T07:37:37.844Z",
+      "portfolioUsd": 100.66695411133335
+    },
+    {
+      "timestamp": "2026-08-02T07:37:40.786Z",
+      "portfolioUsd": 100.66695411133335
+    },
+    {
+      "timestamp": "2026-08-02T07:37:43.848Z",
+      "portfolioUsd": 100.64503763965749
+    },
+    {
+      "timestamp": "2026-08-02T07:37:46.785Z",
+      "portfolioUsd": 100.64503763965749
+    },
+    {
+      "timestamp": "2026-08-02T07:37:49.849Z",
+      "portfolioUsd": 100.63597515193217
+    },
+    {
+      "timestamp": "2026-08-02T07:37:52.795Z",
+      "portfolioUsd": 100.63597515193217
+    },
+    {
+      "timestamp": "2026-08-02T07:37:55.855Z",
+      "portfolioUsd": 100.58638535733668
+    },
+    {
+      "timestamp": "2026-08-02T07:37:58.786Z",
+      "portfolioUsd": 100.58638535733668
+    },
+    {
+      "timestamp": "2026-08-02T07:38:01.857Z",
+      "portfolioUsd": 100.55868695158236
+    },
+    {
+      "timestamp": "2026-08-02T07:38:04.790Z",
+      "portfolioUsd": 100.55868695158236
+    },
+    {
+      "timestamp": "2026-08-02T07:38:07.860Z",
+      "portfolioUsd": 100.61635201232555
+    },
+    {
+      "timestamp": "2026-08-02T07:38:10.793Z",
+      "portfolioUsd": 100.61635201232555
+    },
+    {
+      "timestamp": "2026-08-02T07:38:13.859Z",
+      "portfolioUsd": 100.59483910619143
+    },
+    {
+      "timestamp": "2026-08-02T07:38:16.808Z",
+      "portfolioUsd": 100.59483910619143
+    },
+    {
+      "timestamp": "2026-08-02T07:38:19.865Z",
+      "portfolioUsd": 100.5062075663952
+    },
+    {
+      "timestamp": "2026-08-02T07:38:22.805Z",
+      "portfolioUsd": 100.5062075663952
+    },
+    {
+      "timestamp": "2026-08-02T07:38:25.877Z",
+      "portfolioUsd": 100.55520797744508
+    },
+    {
+      "timestamp": "2026-08-02T07:38:28.810Z",
+      "portfolioUsd": 100.55520797744508
+    },
+    {
+      "timestamp": "2026-08-02T07:38:31.878Z",
+      "portfolioUsd": 100.55520797744508
+    },
+    {
+      "timestamp": "2026-08-02T07:38:34.816Z",
+      "portfolioUsd": 100.55520797744508
+    },
+    {
+      "timestamp": "2026-08-02T07:38:37.882Z",
+      "portfolioUsd": 100.52290791504116
+    },
+    {
+      "timestamp": "2026-08-02T07:38:40.815Z",
+      "portfolioUsd": 100.52290791504116
+    },
+    {
+      "timestamp": "2026-08-02T07:38:43.939Z",
+      "portfolioUsd": 100.52290791504116
+    },
+    {
+      "timestamp": "2026-08-02T07:38:46.837Z",
+      "portfolioUsd": 100.52290791504116
+    },
+    {
+      "timestamp": "2026-08-02T07:38:49.892Z",
+      "portfolioUsd": 100.50044147122583
+    },
+    {
+      "timestamp": "2026-08-02T07:38:52.827Z",
+      "portfolioUsd": 100.50044147122583
+    },
+    {
+      "timestamp": "2026-08-02T07:38:55.898Z",
+      "portfolioUsd": 100.50044147122583
+    },
+    {
+      "timestamp": "2026-08-02T07:38:58.832Z",
+      "portfolioUsd": 100.50044147122583
+    },
+    {
+      "timestamp": "2026-08-02T07:39:01.895Z",
+      "portfolioUsd": 100.50044015579216
+    },
+    {
+      "timestamp": "2026-08-02T07:39:04.839Z",
+      "portfolioUsd": 100.50044015579216
+    },
+    {
+      "timestamp": "2026-08-02T07:39:07.904Z",
+      "portfolioUsd": 100.50044124469474
+    },
+    {
+      "timestamp": "2026-08-02T07:39:10.844Z",
+      "portfolioUsd": 100.50044124469474
+    },
+    {
+      "timestamp": "2026-08-02T07:39:13.915Z",
+      "portfolioUsd": 100.43370437346745
     }
   ],
   "activity": [
     {
-      "timestamp": "2026-08-02T07:36:40.744Z",
+      "timestamp": "2026-08-02T07:39:13.915Z",
       "symbol": "KINS",
-      "action": "HOLD",
-      "sizeUsd": 0,
-      "priceUsd": 0.005436507170443403,
-      "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "action": "SELL",
+      "sizeUsd": 4.591872220990462,
+      "priceUsd": 0.005015317010433057,
+      "result": "paper-emergency-exit",
+      "rationale": "Circuit breaker: KINS fell 8.2% below its average entry. Closing the complete paper position."
     },
     {
-      "timestamp": "2026-08-02T07:36:37.802Z",
+      "timestamp": "2026-08-02T07:39:10.844Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005436507170443403,
+      "priceUsd": 0.005035870496751836,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:36:34.738Z",
+      "timestamp": "2026-08-02T07:39:07.904Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005436507170443403,
+      "priceUsd": 0.005035870496751836,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:36:31.812Z",
+      "timestamp": "2026-08-02T07:39:04.839Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005436507170443403,
+      "priceUsd": 0.005035869307434864,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:36:28.741Z",
+      "timestamp": "2026-08-02T07:39:01.895Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.00548798327577968,
+      "priceUsd": 0.005035869307434864,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:36:25.744Z",
+      "timestamp": "2026-08-02T07:38:58.832Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.00548798327577968,
+      "priceUsd": 0.005035870744172758,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:36:22.731Z",
+      "timestamp": "2026-08-02T07:38:55.898Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.00548798327577968,
+      "priceUsd": 0.005035870744172758,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:36:19.793Z",
+      "timestamp": "2026-08-02T07:38:52.827Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.00548798327577968,
+      "priceUsd": 0.005035870744172758,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:36:16.726Z",
+      "timestamp": "2026-08-02T07:38:49.892Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005488131624917523,
+      "priceUsd": 0.005035870744172758,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:36:13.730Z",
+      "timestamp": "2026-08-02T07:38:46.837Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005488131624917523,
+      "priceUsd": 0.005060408956999308,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:36:10.725Z",
+      "timestamp": "2026-08-02T07:38:43.939Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005488131624917523,
+      "priceUsd": 0.005060408956999308,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:36:07.797Z",
+      "timestamp": "2026-08-02T07:38:40.815Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005488131624917523,
+      "priceUsd": 0.005060408956999308,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:36:04.723Z",
+      "timestamp": "2026-08-02T07:38:37.882Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005488131624917523,
+      "priceUsd": 0.005060408956999308,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:36:01.785Z",
+      "timestamp": "2026-08-02T07:38:34.816Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005488131624917523,
+      "priceUsd": 0.005095687606886793,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:35:58.728Z",
+      "timestamp": "2026-08-02T07:38:31.878Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005488131624917523,
+      "priceUsd": 0.005095687606886793,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:35:55.780Z",
+      "timestamp": "2026-08-02T07:38:28.810Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005488131624917523,
+      "priceUsd": 0.005095687606886793,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:35:52.716Z",
+      "timestamp": "2026-08-02T07:38:25.877Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005488131624917523,
+      "priceUsd": 0.005095687606886793,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:35:49.788Z",
+      "timestamp": "2026-08-02T07:38:22.805Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005488131624917523,
+      "priceUsd": 0.00504216856645416,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:35:46.718Z",
+      "timestamp": "2026-08-02T07:38:19.865Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.0054876197597972095,
+      "priceUsd": 0.00504216856645416,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:35:43.774Z",
+      "timestamp": "2026-08-02T07:38:16.808Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.0054876197597972095,
+      "priceUsd": 0.005138973365849267,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:35:40.703Z",
+      "timestamp": "2026-08-02T07:38:13.859Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.0054876197597972095,
+      "priceUsd": 0.005138973365849267,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:35:37.785Z",
+      "timestamp": "2026-08-02T07:38:10.793Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.0054876197597972095,
+      "priceUsd": 0.0051624701094182815,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:35:34.702Z",
+      "timestamp": "2026-08-02T07:38:07.860Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.0054876197597972095,
+      "priceUsd": 0.0051624701094182815,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:35:31.763Z",
+      "timestamp": "2026-08-02T07:38:04.790Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.0054876197597972095,
+      "priceUsd": 0.005099487398633997,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:35:28.694Z",
+      "timestamp": "2026-08-02T07:38:01.857Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005464476806240265,
+      "priceUsd": 0.005099487398633997,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:35:25.761Z",
+      "timestamp": "2026-08-02T07:37:58.786Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005464476806240265,
+      "priceUsd": 0.005129740044800089,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:35:22.694Z",
+      "timestamp": "2026-08-02T07:37:55.855Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005464476806240265,
+      "priceUsd": 0.005129740044800089,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:35:19.692Z",
+      "timestamp": "2026-08-02T07:37:52.795Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005464476806240265,
+      "priceUsd": 0.005183902819461323,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     },
     {
-      "timestamp": "2026-08-02T07:35:16.692Z",
+      "timestamp": "2026-08-02T07:37:49.849Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005464476806240265,
+      "priceUsd": 0.005183902819461323,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "Blocked: remaining entry capacity is too small for an economical fill"
     },
     {
-      "timestamp": "2026-08-02T07:35:13.684Z",
+      "timestamp": "2026-08-02T07:37:46.785Z",
       "symbol": "KINS",
       "action": "HOLD",
       "sizeUsd": 0,
-      "priceUsd": 0.005464476806240265,
+      "priceUsd": 0.0051938010149376376,
       "result": "no-action",
-      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+      "rationale": "The previous grid order did not fill. Its level is available again."
     }
   ]
 }
