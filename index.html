@@ -101,15 +101,25 @@ h1 { margin: 0; font-size: clamp(48px, 7vw, 88px); line-height: .94; letter-spac
 .main-grid { display: grid; grid-template-columns: 1.65fr .65fr; gap: 18px; margin-bottom: 18px; }
 .lower-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
 .panel { border: 1px solid var(--line); background: linear-gradient(145deg, rgba(16,21,16,.94), rgba(10,13,10,.94)); }
-.chart-panel { padding: 30px 32px 22px; min-height: 430px; }
+.chart-panel { padding: 30px 32px 22px; min-height: 500px; }
 .panel-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
 .panel-heading h2, .guard-panel h2, .about-panel h2 { margin: 0; font-size: 24px; letter-spacing: -.02em; }
 .chart-value { text-align: right; }
 .chart-value strong { display: block; font-size: 25px; }
 .chart-value span { font-family: monospace; font-size: 10px; }
-.chart { position: relative; height: 270px; margin-top: 28px; overflow: hidden; border-bottom: 1px solid var(--line); }
+.chart { position: relative; height: 340px; margin-top: 28px; overflow: hidden; border: 1px solid var(--line); background: rgba(5,8,5,.58); }
 .live-chart canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; }
-.chart-empty { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; color: var(--muted); font-family: monospace; font-size: 11px; z-index: 3; }
+.chart-overlay-toolbar { position: absolute; z-index: 4; top: 9px; left: 11px; right: 11px; display: flex; align-items: center; justify-content: space-between; gap: 14px; pointer-events: none; }
+.chart-overlay-toolbar > span { color: var(--muted); font: 800 8px/1 "SFMono-Regular", Consolas, monospace; letter-spacing: .1em; white-space: nowrap; }
+.chart-legend { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px; color: #788273; font: 700 7px/1 "SFMono-Regular", Consolas, monospace; letter-spacing: .08em; }
+.chart-legend[hidden] { display: none; }
+.chart-legend span { display: inline-flex; align-items: center; gap: 4px; }
+.chart-legend i { width: 9px; height: 2px; display: inline-block; background: var(--text); }
+.chart-legend i.buy { background: #68d8ff; }
+.chart-legend i.held { background: var(--purple); }
+.chart-legend i.sell { background: var(--green); }
+.chart-legend i.boundary { height: 1px; background: repeating-linear-gradient(90deg, var(--red) 0 3px, transparent 3px 5px); }
+.chart-empty { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; color: var(--muted); font-family: monospace; font-size: 11px; z-index: 5; }
 .chart-empty[hidden] { display: none; }
 .chart-grid { position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, transparent 0, transparent 66px, var(--line-soft) 67px); }
 .area-fill {
@@ -123,8 +133,8 @@ h1 { margin: 0; font-size: clamp(48px, 7vw, 88px); line-height: .94; letter-spac
 .chart.fresh .end-point { bottom: calc(50% - 4px); }
 .area-fill::before { content: ""; position: absolute; inset: 0; background: var(--green); clip-path: polygon(0 41.4%, 7% 28.4%, 13% 35.4%, 20% 35.4%, 27% 33.4%, 33% 35.4%, 40% 19.4%, 47% 29.4%, 53% 29.4%, 60% 29.4%, 67% 52.4%, 73% 64.4%, 80% 52.4%, 87% 52.4%, 93% 71.4%, 100% 94.4%, 100% 95.3%, 93% 72.3%, 87% 53.3%, 80% 53.3%, 73% 65.3%, 67% 53.3%, 60% 30.3%, 53% 30.3%, 47% 30.3%, 40% 20.3%, 33% 36.3%, 27% 34.3%, 20% 36.3%, 13% 36.3%, 7% 29.3%, 0 42.3%); }
 .end-point { position: absolute; right: 0; bottom: 2%; width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 15px var(--green); }
-.chart-high, .chart-low { position: absolute; right: 10px; color: var(--muted); font-family: monospace; font-size: 9px; }
-.chart-high { top: 7px; }
+.chart-high, .chart-low { position: absolute; z-index: 3; right: 10px; color: var(--muted); font-family: monospace; font-size: 9px; }
+.chart-high { top: 29px; }
 .chart-low { bottom: 8px; }
 .chart-axis { display: flex; justify-content: space-between; margin-top: 12px; color: var(--muted); font-family: monospace; font-size: 9px; }
 .guard-panel { padding: 30px; display: flex; flex-direction: column; }
@@ -176,7 +186,9 @@ footer p { margin: 0; max-width: 680px; }
   .metric { min-height: 130px; border-right: 0; border-bottom: 1px solid var(--line); }
   .metric:last-child { border-bottom: 0; }
   .chart-panel, .guard-panel, .activity-panel, .about-panel { padding: 24px 20px; }
-  .chart { height: 220px; }
+  .chart { height: 360px; }
+  .chart-overlay-toolbar { align-items: flex-start; }
+  .chart-legend { max-width: 185px; gap: 7px; }
   .chart-value { display: none; }
   .activity-list li { grid-template-columns: 56px 8px 1fr; gap: 10px; }
   footer { flex-direction: column; gap: 15px; }
@@ -220,14 +232,20 @@ footer p { margin: 0; max-width: 680px; }
         <section class="main-grid">
           <article class="panel chart-panel">
             <div class="panel-heading">
-              <div><p class="eyebrow">PUBLIC PORTFOLIO TRACE</p><h2 id="chartHeading">Current paper session</h2></div>
-              <div class="chart-value"><strong id="chartValue">$100.00</strong><span id="chartChange">0.00% so far</span></div>
+              <div><p class="eyebrow">PUBLIC PRICE + GRID TRACE</p><h2 id="chartHeading">Live grid range</h2></div>
+              <div class="chart-value"><strong id="chartValue">$—</strong><span id="chartChange">GRID WARMING</span></div>
             </div>
-            <div class="chart live-chart" role="img" aria-label="Paper portfolio value history">
+            <div class="chart live-chart" role="img" aria-label="Selected token price history with paper grid levels">
               <div class="chart-grid"></div>
+              <div class="chart-overlay-toolbar" aria-hidden="true">
+                <span id="gridOverlayState">GRID WARMING</span>
+                <div class="chart-legend" id="gridLegend" hidden>
+                  <span><i class="price"></i>PRICE</span><span><i class="buy"></i>BUY</span><span><i class="held"></i>HELD</span><span><i class="sell"></i>SELL</span><span><i class="boundary"></i>STOP / TAKE</span>
+                </div>
+              </div>
               <canvas id="portfolioChart"></canvas>
-              <span class="chart-high" id="chartHigh">$100.00</span><span class="chart-low" id="chartLow">$100.00</span>
-              <p class="chart-empty" id="chartEmpty">Collecting portfolio history…</p>
+              <span class="chart-high" id="chartHigh">$—</span><span class="chart-low" id="chartLow">$—</span>
+              <p class="chart-empty" id="chartEmpty">Collecting price and grid history…</p>
             </div>
             <div class="chart-axis"><span id="chartStart">—</span><span id="chartEnd">—</span></div>
           </article>
@@ -274,6 +292,18 @@ function formatPercent(value) {
   return Number.isFinite(value) ? `${value >= 0 ? "+" : ""}${(value * 100).toFixed(2)}%` : "—";
 }
 
+function formatTokenPrice(value) {
+  if (!Number.isFinite(value)) return "$—";
+  if (value === 0) return "$0.00";
+  const magnitude = Math.abs(value);
+  const decimals = magnitude >= 1_000
+    ? 2
+    : magnitude >= 1
+      ? 4
+      : Math.min(12, Math.max(4, Math.ceil(-Math.log10(magnitude)) + 4));
+  return `${value.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}`;
+}
+
 function formatTime(value) {
   return value ? new Date(value).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "—";
 }
@@ -293,51 +323,131 @@ function freshness(data) {
   return { fresh: Number.isFinite(ageMs) && ageMs <= staleAfterMs, ageMs };
 }
 
-function drawChart(history) {
+function drawChart(history, grid, snapshot) {
   const canvas = byId("portfolioChart");
-  const points = history.filter((point) => Number.isFinite(point.portfolioUsd));
+  const points = history.filter((point) => Number.isFinite(point.priceUsd) && point.priceUsd > 0);
+  if (!points.length && Number.isFinite(snapshot?.tokenPriceUsd) && snapshot.tokenPriceUsd > 0) {
+    points.push({ timestamp: snapshot.updatedAt, priceUsd: snapshot.tokenPriceUsd });
+  }
+  const gridValues = grid
+    ? [grid.stopLossPriceUsd, grid.lowerPriceUsd, grid.upperPriceUsd, grid.takeProfitPriceUsd, ...(grid.levels || []).map((level) => level.priceUsd)].filter((value) => Number.isFinite(value) && value > 0)
+    : [];
   const ratio = window.devicePixelRatio || 1;
   const width = canvas.clientWidth;
   const height = canvas.clientHeight;
-  canvas.width = Math.max(1, width * ratio);
-  canvas.height = Math.max(1, height * ratio);
+  canvas.width = Math.max(1, Math.round(width * ratio));
+  canvas.height = Math.max(1, Math.round(height * ratio));
   const context = canvas.getContext("2d");
-  context.scale(ratio, ratio);
+  context.setTransform(ratio, 0, 0, ratio, 0, 0);
   context.clearRect(0, 0, width, height);
   byId("chartEmpty").hidden = points.length > 0;
-  if (!points.length) return;
+  byId("gridLegend").hidden = !grid;
+  byId("gridOverlayState").textContent = grid
+    ? `${grid.levels.length} LEVELS · ${grid.spacingPct.toFixed(2)}% SPACING · ${grid.status.toUpperCase()}`
+    : "GRID DATA WARMING";
+  if (!points.length) {
+    byId("chartHigh").textContent = "$—";
+    byId("chartLow").textContent = "$—";
+    return;
+  }
 
-  const values = points.map((point) => point.portfolioUsd);
-  const minimum = Math.min(...values);
-  const maximum = Math.max(...values);
-  const spread = Math.max(maximum - minimum, Math.max(0.01, maximum * 0.0005));
-  const padding = 10;
-  const coordinates = values.map((value, index) => [
-    padding + (points.length === 1 ? 0.5 : index / (points.length - 1)) * (width - padding * 2),
-    padding + (maximum - value) / spread * (height - padding * 2)
-  ]);
+  const values = points.map((point) => point.priceUsd);
+  const domain = [...values, ...gridValues];
+  const rawMinimum = Math.min(...domain);
+  const rawMaximum = Math.max(...domain);
+  const rawSpread = Math.max(rawMaximum - rawMinimum, rawMaximum * .001, Number.EPSILON);
+  const minimum = rawMinimum - rawSpread * .045;
+  const maximum = rawMaximum + rawSpread * .045;
+  const spread = maximum - minimum;
+  const left = 8;
+  const right = 8;
+  const top = 29;
+  const bottom = 8;
+  const plotWidth = Math.max(1, width - left - right);
+  const plotHeight = Math.max(1, height - top - bottom);
+  const yFor = (value) => top + (maximum - value) / spread * plotHeight;
+  const xFor = (index) => points.length === 1
+    ? left + plotWidth / 2
+    : left + index / (points.length - 1) * plotWidth;
+  const drawHorizontal = (value, color, dash = [], lineWidth = 1) => {
+    const y = yFor(value);
+    context.save();
+    context.setLineDash(dash);
+    context.strokeStyle = color;
+    context.lineWidth = lineWidth;
+    context.beginPath();
+    context.moveTo(left, y);
+    context.lineTo(width - right, y);
+    context.stroke();
+    context.restore();
+    return y;
+  };
+  const drawLabel = (label, value, y, color, side = "right") => {
+    context.save();
+    context.font = '700 8px "SFMono-Regular", Consolas, monospace';
+    const text = `${label}  ${formatTokenPrice(value)}`;
+    const textWidth = context.measureText(text).width;
+    const x = side === "left" ? left + 4 : width - right - textWidth - 9;
+    const labelY = Math.max(top + 5, Math.min(height - bottom - 5, y - 4));
+    context.fillStyle = "rgba(5,8,5,.86)";
+    context.fillRect(x - 4, labelY - 8, textWidth + 8, 12);
+    context.fillStyle = color;
+    context.fillText(text, x, labelY);
+    context.restore();
+  };
+
+  if (grid) {
+    const upperY = yFor(grid.upperPriceUsd);
+    const lowerY = yFor(grid.lowerPriceUsd);
+    context.fillStyle = "rgba(104,216,255,.035)";
+    context.fillRect(left, upperY, plotWidth, Math.max(1, lowerY - upperY));
+    (grid.levels || []).forEach((level, index) => {
+      const colors = {
+        buy: "rgba(104,216,255,.50)",
+        held: "rgba(156,124,255,.76)",
+        sell: "rgba(185,255,53,.78)",
+        waiting: "rgba(104,116,103,.32)"
+      };
+      const color = colors[level.state] || colors.waiting;
+      const y = drawHorizontal(level.priceUsd, color, level.state === "waiting" ? [2, 5] : [], level.state === "held" || level.state === "sell" ? 1.2 : .8);
+      drawLabel(`G${index + 1} ${level.state.toUpperCase()}`, level.priceUsd, y, color, index % 2 ? "left" : "right");
+    });
+    const stopY = drawHorizontal(grid.stopLossPriceUsd, "rgba(255,113,109,.84)", [6, 4], 1.2);
+    drawLabel("STOP", grid.stopLossPriceUsd, stopY, "#ff8d89", "left");
+    const takeY = drawHorizontal(grid.takeProfitPriceUsd, "rgba(185,255,53,.84)", [6, 4], 1.2);
+    drawLabel("TAKE", grid.takeProfitPriceUsd, takeY, "#b9ff35", "left");
+  }
+
+  const coordinates = values.map((value, index) => [xFor(index), yFor(value)]);
   const gradient = context.createLinearGradient(0, 0, 0, height);
-  gradient.addColorStop(0, "rgba(185,255,53,.32)");
+  gradient.addColorStop(0, "rgba(185,255,53,.18)");
   gradient.addColorStop(1, "rgba(185,255,53,0)");
   context.beginPath();
   coordinates.forEach(([x, y], index) => index ? context.lineTo(x, y) : context.moveTo(x, y));
-  context.lineTo(coordinates.at(-1)[0], height);
-  context.lineTo(coordinates[0][0], height);
+  context.lineTo(coordinates.at(-1)[0], height - bottom);
+  context.lineTo(coordinates[0][0], height - bottom);
   context.closePath();
   context.fillStyle = gradient;
   context.fill();
   context.beginPath();
   coordinates.forEach(([x, y], index) => index ? context.lineTo(x, y) : context.moveTo(x, y));
-  context.strokeStyle = "#b9ff35";
-  context.lineWidth = 1.5;
+  context.strokeStyle = "#f1f5e9";
+  context.lineWidth = 1.8;
+  context.shadowColor = "rgba(185,255,53,.35)";
+  context.shadowBlur = 4;
   context.stroke();
+  context.shadowBlur = 0;
   const [x, y] = coordinates.at(-1);
   context.beginPath();
   context.arc(x, y, 3.5, 0, Math.PI * 2);
   context.fillStyle = "#b9ff35";
   context.fill();
-  byId("chartHigh").textContent = formatMoney(maximum);
-  byId("chartLow").textContent = formatMoney(minimum);
+  if (grid) {
+    drawHorizontal(values.at(-1), "rgba(241,245,233,.52)", [2, 4], .8);
+    drawLabel("NOW", values.at(-1), y, "#f1f5e9", "right");
+  }
+  byId("chartHigh").textContent = formatTokenPrice(rawMaximum);
+  byId("chartLow").textContent = formatTokenPrice(rawMinimum);
   byId("chartStart").textContent = formatTime(points[0].timestamp);
   byId("chartEnd").textContent = formatTime(points.at(-1).timestamp);
 }
@@ -416,10 +526,12 @@ function render(data) {
   byId("tradeCaption").textContent = data.completedCycles ? `${data.completedCycles} completed grid cycles` : "Recent published fills";
   byId("marketSymbol").textContent = data.asset.symbol;
   byId("marketCaption").textContent = data.asset.name;
-  byId("chartValue").textContent = formatMoney(data.portfolioUsd);
-  byId("chartChange").textContent = `${formatPercent(data.pnlPercent)} so far`;
-  setTone(byId("chartChange"), data.pnlUsd);
-  byId("chartHeading").textContent = `${data.asset.symbol} paper session`;
+  byId("chartValue").textContent = formatTokenPrice(data.tokenPriceUsd);
+  byId("chartChange").textContent = data.grid
+    ? `${data.grid.spacingPct.toFixed(2)}% spacing · ${data.grid.openLots} open lot${data.grid.openLots === 1 ? "" : "s"}`
+    : "Grid data warming";
+  byId("chartChange").className = "";
+  byId("chartHeading").textContent = `${data.asset.symbol} price + paper grid`;
   byId("openExposure").textContent = formatMoney(data.positionUsd);
 
   const decision = data.decision;
@@ -432,12 +544,13 @@ function render(data) {
   byId("activityDate").textContent = formatDate(data.updatedAt);
   const updated = new Date(data.updatedAt);
   byId("lastUpdated").textContent = `${fresh ? "Live snapshot" : "Last snapshot"}: ${updated.toLocaleString([], { dateStyle: "medium", timeStyle: "short" })}.`;
-  drawChart(data.history || []);
+  drawChart(data.history || [], data.grid, data);
 }
 
 async function refresh() {
   try {
-    const statusPath = location.hostname.endsWith("github.io") ? "status.json" : "/api/status";
+    const standaloneMirror = !document.querySelector('script[src="/app.js"]');
+    const statusPath = location.hostname.endsWith("github.io") || standaloneMirror ? "status.json" : "/api/status";
     const response = await fetch(`${statusPath}?time=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`status ${response.status}`);
     render(await response.json());
@@ -448,7 +561,7 @@ async function refresh() {
   }
 }
 
-window.addEventListener("resize", () => currentSnapshot && drawChart(currentSnapshot.history || []));
+window.addEventListener("resize", () => currentSnapshot && drawChart(currentSnapshot.history || [], currentSnapshot.grid, currentSnapshot));
 refresh();
 setInterval(refresh, 30_000);
 
