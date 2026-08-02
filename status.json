@@ -1,27 +1,525 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-02T15:12:57.064Z",
+  "updatedAt": "2026-08-02T15:14:43.041Z",
   "startedAt": "2026-08-02T15:12:57.059Z",
   "publishIntervalSeconds": 300,
   "mode": "paper",
   "paused": false,
   "healthy": true,
-  "status": "warming",
+  "status": "running",
   "asset": {
     "symbol": "SOL",
-    "name": "Solana"
+    "name": "Wrapped SOL"
   },
   "initialPortfolioUsd": 100,
   "portfolioUsd": 100,
   "cashUsd": 100,
   "positionUsd": 0,
-  "tokenPriceUsd": null,
+  "tokenPriceUsd": 73.12715184972953,
   "pnlUsd": 0,
   "pnlPercent": 0,
   "tradeCount": 0,
   "completedCycles": 0,
-  "grid": null,
-  "decision": null,
-  "history": [],
-  "activity": []
+  "grid": {
+    "status": "active",
+    "spacingPct": 2.66,
+    "currentPriceUsd": 73.12715184972953,
+    "lowerPriceUsd": 65.80961764547122,
+    "upperPriceUsd": 81.18942150327292,
+    "stopLossPriceUsd": 64.10443955335207,
+    "takeProfitPriceUsd": 83.34906011525999,
+    "perGridUsd": 2.5,
+    "openLots": 0,
+    "completedCycles": 0,
+    "realizedPnlUsd": 0,
+    "levels": [
+      {
+        "priceUsd": 65.80961764547122,
+        "state": "buy"
+      },
+      {
+        "priceUsd": 67.56015347484075,
+        "state": "buy"
+      },
+      {
+        "priceUsd": 69.3572535572715,
+        "state": "buy"
+      },
+      {
+        "priceUsd": 71.20215650189493,
+        "state": "buy"
+      },
+      {
+        "priceUsd": 73.09613386484534,
+        "state": "waiting"
+      },
+      {
+        "priceUsd": 75.04049102565021,
+        "state": "waiting"
+      },
+      {
+        "priceUsd": 77.03656808693252,
+        "state": "waiting"
+      },
+      {
+        "priceUsd": 79.08574079804492,
+        "state": "waiting"
+      },
+      {
+        "priceUsd": 81.1894215032729,
+        "state": "waiting"
+      }
+    ]
+  },
+  "decision": {
+    "action": "HOLD",
+    "confidence": 1,
+    "sizeUsd": 0,
+    "rationale": "Price remains between grid levels. Waiting for the next crossing.",
+    "executed": false
+  },
+  "history": [
+    {
+      "timestamp": "2026-08-02T15:13:04.601Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.09613386484534
+    },
+    {
+      "timestamp": "2026-08-02T15:13:05.648Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.09613386484534
+    },
+    {
+      "timestamp": "2026-08-02T15:13:07.680Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.0953120064846
+    },
+    {
+      "timestamp": "2026-08-02T15:13:10.655Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.0953120064846
+    },
+    {
+      "timestamp": "2026-08-02T15:13:13.658Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.11442848629558
+    },
+    {
+      "timestamp": "2026-08-02T15:13:16.786Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12564606506585
+    },
+    {
+      "timestamp": "2026-08-02T15:13:19.657Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12564606506585
+    },
+    {
+      "timestamp": "2026-08-02T15:13:22.664Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12593126328257
+    },
+    {
+      "timestamp": "2026-08-02T15:13:25.657Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12593126328257
+    },
+    {
+      "timestamp": "2026-08-02T15:13:28.678Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.13168083923837
+    },
+    {
+      "timestamp": "2026-08-02T15:13:31.672Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.13168083923837
+    },
+    {
+      "timestamp": "2026-08-02T15:13:34.664Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12552501701067
+    },
+    {
+      "timestamp": "2026-08-02T15:13:37.736Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.11688699285659
+    },
+    {
+      "timestamp": "2026-08-02T15:13:40.663Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.11688699285659
+    },
+    {
+      "timestamp": "2026-08-02T15:13:43.661Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.1263535167469
+    },
+    {
+      "timestamp": "2026-08-02T15:13:46.666Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.1263535167469
+    },
+    {
+      "timestamp": "2026-08-02T15:13:49.664Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12082826899214
+    },
+    {
+      "timestamp": "2026-08-02T15:13:52.676Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12082826899214
+    },
+    {
+      "timestamp": "2026-08-02T15:13:55.668Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12160442136539
+    },
+    {
+      "timestamp": "2026-08-02T15:14:03.983Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.13083635741407
+    },
+    {
+      "timestamp": "2026-08-02T15:14:04.982Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.13083635741407
+    },
+    {
+      "timestamp": "2026-08-02T15:14:07.031Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.13083635741407
+    },
+    {
+      "timestamp": "2026-08-02T15:14:10.034Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12764485838164
+    },
+    {
+      "timestamp": "2026-08-02T15:14:13.036Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12764485838164
+    },
+    {
+      "timestamp": "2026-08-02T15:14:16.032Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.1291257383697
+    },
+    {
+      "timestamp": "2026-08-02T15:14:19.034Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.1291257383697
+    },
+    {
+      "timestamp": "2026-08-02T15:14:22.048Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12566402782002
+    },
+    {
+      "timestamp": "2026-08-02T15:14:25.037Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.13132750414513
+    },
+    {
+      "timestamp": "2026-08-02T15:14:28.034Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.13132750414513
+    },
+    {
+      "timestamp": "2026-08-02T15:14:31.051Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12967014633679
+    },
+    {
+      "timestamp": "2026-08-02T15:14:34.041Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12967014633679
+    },
+    {
+      "timestamp": "2026-08-02T15:14:37.057Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.13115898104716
+    },
+    {
+      "timestamp": "2026-08-02T15:14:40.040Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.13115898104716
+    },
+    {
+      "timestamp": "2026-08-02T15:14:43.041Z",
+      "portfolioUsd": 100,
+      "priceUsd": 73.12715184972953
+    }
+  ],
+  "activity": [
+    {
+      "timestamp": "2026-08-02T15:14:43.041Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12715184972953,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:40.040Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.13115898104716,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:37.057Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.13115898104716,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:34.041Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12967014633679,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:31.051Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12967014633679,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:28.034Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.13132750414513,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:25.037Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.13132750414513,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:22.048Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12566402782002,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:19.034Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.1291257383697,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:16.032Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.1291257383697,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:13.036Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12764485838164,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:10.034Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12764485838164,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:07.031Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.13083635741407,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:04.982Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.13083635741407,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:14:03.983Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.13083635741407,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:55.668Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12160442136539,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:52.676Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12082826899214,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:49.664Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12082826899214,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:46.666Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.1263535167469,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:43.661Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.1263535167469,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:40.663Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.11688699285659,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:37.736Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.11688699285659,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:34.664Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12552501701067,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:31.672Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.13168083923837,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:28.678Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.13168083923837,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:25.657Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12593126328257,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:22.664Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12593126328257,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:19.657Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12564606506585,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:16.786Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.12564606506585,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    },
+    {
+      "timestamp": "2026-08-02T15:13:13.658Z",
+      "symbol": "SOL",
+      "action": "HOLD",
+      "sizeUsd": 0,
+      "priceUsd": 73.11442848629558,
+      "result": "no-action",
+      "rationale": "Price remains between grid levels. Waiting for the next crossing."
+    }
+  ]
 }
