@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A read-only live mirror of an experimental Solana AI paper-trading bot.">
+    <meta name="orbit-status-endpoint" content="https://orbit-paper-progress.karlgroenke.chatgpt.site/api/status">
     <meta name="theme-color" content="#080b08">
     <meta property="og:title" content="Orbit — Live paper-trading experiment">
     <meta property="og:description" content="Follow a sanitized, read-only Solana AI paper-trading experiment.">
@@ -319,7 +320,7 @@ function setTone(element, value) {
 
 function freshness(data) {
   const ageMs = Date.now() - new Date(data.updatedAt).getTime();
-  const staleAfterMs = Math.max(180_000, Number(data.publishIntervalSeconds || 60) * 3_000);
+  const staleAfterMs = Math.max(20_000, Number(data.publishIntervalSeconds || 5) * 3_000);
   return { fresh: Number.isFinite(ageMs) && ageMs <= staleAfterMs, ageMs };
 }
 
@@ -550,7 +551,8 @@ function render(data) {
 async function refresh() {
   try {
     const standaloneMirror = !document.querySelector('script[src="/app.js"]');
-    const statusPath = location.hostname.endsWith("github.io") || standaloneMirror ? "status.json" : "/api/status";
+    const configuredStatusPath = document.querySelector('meta[name="orbit-status-endpoint"]')?.content.trim();
+    const statusPath = configuredStatusPath || (location.hostname.endsWith("github.io") || standaloneMirror ? "status.json" : "/api/status");
     const response = await fetch(`${statusPath}?time=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`status ${response.status}`);
     render(await response.json());
@@ -563,7 +565,7 @@ async function refresh() {
 
 window.addEventListener("resize", () => currentSnapshot && drawChart(currentSnapshot.history || [], currentSnapshot.grid, currentSnapshot));
 refresh();
-setInterval(refresh, 30_000);
+setInterval(refresh, 5_000);
 
 </script>
   </body>
